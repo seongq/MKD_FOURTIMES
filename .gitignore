@@ -2,3 +2,5 @@ CREMA_D_MKD/original/*
 CREMA_D_MKD/original/
 CREMA_D_MKD/original
 CREMA_D_MKD/MKD/ckpt
+CREMA_D_MKD/MKD/wandb
+CREMA_D_MKD/MKD/wandb/*

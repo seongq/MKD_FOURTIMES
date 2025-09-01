@@ -247,3 +247,8 @@ Loss: 0.134, Acc: 0.601, Best Acc: 0.633
 Audio Acc: 0.496， Visual Acc: 0.430
 Epoch: 60:
 Start training ...
+The best model has been saved at /workspace/emotion_KD250628/MKD/CREMA_D_MKD/MKD/ckpt/best_model_of_dataset_CREMAD_OGM_GE_sum_alpha_0.5_optimizer_adam_modulate_starts_0_ends_50_epoch_60_acc_0.6438172043010753_20250901125251.pth.
+Loss: 0.121, Acc: 0.644
+Audio Acc: 0.559， Visual Acc: 0.421
+Epoch: 61:
+Start training ...
