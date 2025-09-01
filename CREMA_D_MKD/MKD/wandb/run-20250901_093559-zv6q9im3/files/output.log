@@ -53,3 +53,7 @@ Loss: 0.560, Acc: 0.536
 Audio Acc: 0.484， Visual Acc: 0.191
 Epoch: 12:
 Start training ...
+Loss: 0.465, Acc: 0.418, Best Acc: 0.536
+Audio Acc: 0.410， Visual Acc: 0.180
+Epoch: 13:
+Start training ...
