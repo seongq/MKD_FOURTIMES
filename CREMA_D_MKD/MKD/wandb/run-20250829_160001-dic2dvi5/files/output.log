@@ -1,0 +1,10 @@
+Epoch: 0:
+Start training ...
+Traceback (most recent call last):
+  File "/workspace/emotion_KD250628/MKD/CREMA_D_MKD/MKD/main.py", line 495, in <module>
+    main()
+  File "/workspace/emotion_KD250628/MKD/CREMA_D_MKD/MKD/main.py", line 397, in main
+    batch_loss, batch_loss_a, batch_loss_v, global_step = train_epoch(args, epoch, model, device,
+  File "/workspace/emotion_KD250628/MKD/CREMA_D_MKD/MKD/main.py", line 190, in train_epoch
+    'train/coeff_a': float(coeff_a),
+UnboundLocalError: local variable 'coeff_a' referenced before assignment

@@ -1,0 +1,78 @@
+Training unimodal model using visual modality
+visual
+Epoch: 0:
+Start training ...
+Loss: 2.118, Acc: 0.000, Best Acc: 0.000
+Epoch: 1:
+Start training ...
+Loss: 2.208, Acc: 0.000, Best Acc: 0.000
+Epoch: 2:
+Start training ...
+The best model has been saved at /workspace/emotion_KD250628/MKD/CREMA_D_MKD/MKD/ckpt/best_model_of_dataset_CREMAD_unimodal_visual_optimizer_sgd_epoch_2_acc_0.1_20250829161219.pth.
+Loss: 2.072, Acc: 0.100
+Epoch: 3:
+Start training ...
+The best model has been saved at /workspace/emotion_KD250628/MKD/CREMA_D_MKD/MKD/ckpt/best_model_of_dataset_CREMAD_unimodal_visual_optimizer_sgd_epoch_3_acc_0.3_20250829161219.pth.
+Loss: 1.865, Acc: 0.300
+Epoch: 4:
+Start training ...
+Loss: 1.939, Acc: 0.200, Best Acc: 0.300
+Epoch: 5:
+Start training ...
+Loss: 1.759, Acc: 0.200, Best Acc: 0.300
+Epoch: 6:
+Start training ...
+Loss: 1.669, Acc: 0.200, Best Acc: 0.300
+Epoch: 7:
+Start training ...
+Loss: 1.637, Acc: 0.300, Best Acc: 0.300
+Epoch: 8:
+Start training ...
+Loss: 1.615, Acc: 0.300, Best Acc: 0.300
+Epoch: 9:
+Start training ...
+Loss: 1.601, Acc: 0.300, Best Acc: 0.300
+Epoch: 10:
+Start training ...
+Loss: 1.639, Acc: 0.300, Best Acc: 0.300
+Epoch: 11:
+Start training ...
+Loss: 1.636, Acc: 0.300, Best Acc: 0.300
+Epoch: 12:
+Start training ...
+Loss: 1.688, Acc: 0.300, Best Acc: 0.300
+Epoch: 13:
+Start training ...
+Loss: 1.606, Acc: 0.300, Best Acc: 0.300
+Epoch: 14:
+Start training ...
+Traceback (most recent call last):
+  File "/workspace/emotion_KD250628/MKD/CREMA_D_MKD/MKD/main.py", line 506, in <module>
+    main()
+  File "/workspace/emotion_KD250628/MKD/CREMA_D_MKD/MKD/main.py", line 405, in main
+    acc = valid(args, model, device, test_dataloader)
+  File "/workspace/emotion_KD250628/MKD/CREMA_D_MKD/MKD/main.py", line 232, in valid
+    for step, (spec, image, label) in enumerate(dataloader):
+  File "/opt/conda/lib/python3.10/site-packages/torch/utils/data/dataloader.py", line 630, in __next__
+    data = self._next_data()
+  File "/opt/conda/lib/python3.10/site-packages/torch/utils/data/dataloader.py", line 674, in _next_data
+    data = self._dataset_fetcher.fetch(index)  # may raise StopIteration
+  File "/opt/conda/lib/python3.10/site-packages/torch/utils/data/_utils/fetch.py", line 51, in fetch
+    data = [self.dataset[idx] for idx in possibly_batched_index]
+  File "/opt/conda/lib/python3.10/site-packages/torch/utils/data/_utils/fetch.py", line 51, in <listcomp>
+    data = [self.dataset[idx] for idx in possibly_batched_index]
+  File "/workspace/emotion_KD250628/MKD/CREMA_D_MKD/MKD/dataset/CramedDataset.py", line 67, in __getitem__
+    spectrogram = librosa.stft(resamples, n_fft=512, hop_length=353)
+  File "/opt/conda/lib/python3.10/site-packages/librosa/core/spectrum.py", line 387, in stft
+    stft_matrix[..., bl_s + off_start : bl_t + off_start] = fft.rfft(
+  File "/opt/conda/lib/python3.10/site-packages/scipy/fft/_backend.py", line 28, in __ua_function__
+    return fn(*args, **kwargs)
+  File "/opt/conda/lib/python3.10/site-packages/scipy/fft/_basic_backend.py", line 91, in rfft
+    return _execute_1D('rfft', _pocketfft.rfft, x, n=n, axis=axis, norm=norm,
+  File "/opt/conda/lib/python3.10/site-packages/scipy/fft/_basic_backend.py", line 32, in _execute_1D
+    return pocketfft_func(x, n=n, axis=axis, norm=norm,
+  File "/opt/conda/lib/python3.10/site-packages/scipy/fft/_pocketfft/basic.py", line 52, in r2c
+    if not np.isrealobj(tmp):
+  File "/opt/conda/lib/python3.10/site-packages/numpy/lib/type_check.py", line 205, in _is_type_dispatcher
+    def _is_type_dispatcher(x):
+KeyboardInterrupt

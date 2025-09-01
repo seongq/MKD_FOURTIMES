@@ -1,0 +1,284 @@
+Epoch: 0:
+Start training ...
+The best model has been saved at /workspace/emotion_KD250628/MKD/CREMA_D_MKD/MKD/ckpt/best_model_of_dataset_CREMAD_OGM_GE_sum_alpha_0.5_optimizer_sgd_modulate_starts_0_ends_50_epoch_0_acc_0.2.pth.
+Loss: 2.241, Acc: 0.200
+Audio Acc: 0.200， Visual Acc: 0.200
+Epoch: 1:
+Start training ...
+Loss: 1.888, Acc: 0.200, Best Acc: 0.200
+Audio Acc: 0.200， Visual Acc: 0.200
+Epoch: 2:
+Start training ...
+Loss: 1.965, Acc: 0.200, Best Acc: 0.200
+Audio Acc: 0.200， Visual Acc: 0.200
+Epoch: 3:
+Start training ...
+Loss: 1.464, Acc: 0.200, Best Acc: 0.200
+Audio Acc: 0.200， Visual Acc: 0.200
+Epoch: 4:
+Start training ...
+Loss: 1.785, Acc: 0.100, Best Acc: 0.200
+Audio Acc: 0.100， Visual Acc: 0.200
+Epoch: 5:
+Start training ...
+Loss: 1.614, Acc: 0.000, Best Acc: 0.200
+Audio Acc: 0.100， Visual Acc: 0.100
+Epoch: 6:
+Start training ...
+Loss: 1.707, Acc: 0.100, Best Acc: 0.200
+Audio Acc: 0.100， Visual Acc: 0.300
+Epoch: 7:
+Start training ...
+Loss: 1.558, Acc: 0.100, Best Acc: 0.200
+Audio Acc: 0.000， Visual Acc: 0.300
+Epoch: 8:
+Start training ...
+Loss: 1.527, Acc: 0.000, Best Acc: 0.200
+Audio Acc: 0.000， Visual Acc: 0.200
+Epoch: 9:
+Start training ...
+Loss: 1.408, Acc: 0.000, Best Acc: 0.200
+Audio Acc: 0.000， Visual Acc: 0.200
+Epoch: 10:
+Start training ...
+Loss: 1.493, Acc: 0.000, Best Acc: 0.200
+Audio Acc: 0.000， Visual Acc: 0.200
+Epoch: 11:
+Start training ...
+Loss: 1.297, Acc: 0.000, Best Acc: 0.200
+Audio Acc: 0.000， Visual Acc: 0.200
+Epoch: 12:
+Start training ...
+Loss: 1.298, Acc: 0.000, Best Acc: 0.200
+Audio Acc: 0.000， Visual Acc: 0.200
+Epoch: 13:
+Start training ...
+Loss: 1.177, Acc: 0.000, Best Acc: 0.200
+Audio Acc: 0.000， Visual Acc: 0.200
+Epoch: 14:
+Start training ...
+Loss: 1.490, Acc: 0.000, Best Acc: 0.200
+Audio Acc: 0.000， Visual Acc: 0.200
+Epoch: 15:
+Start training ...
+Loss: 1.107, Acc: 0.000, Best Acc: 0.200
+Audio Acc: 0.000， Visual Acc: 0.200
+Epoch: 16:
+Start training ...
+Loss: 0.903, Acc: 0.000, Best Acc: 0.200
+Audio Acc: 0.000， Visual Acc: 0.200
+Epoch: 17:
+Start training ...
+Loss: 0.887, Acc: 0.000, Best Acc: 0.200
+Audio Acc: 0.000， Visual Acc: 0.200
+Epoch: 18:
+Start training ...
+Loss: 0.884, Acc: 0.000, Best Acc: 0.200
+Audio Acc: 0.000， Visual Acc: 0.200
+Epoch: 19:
+Start training ...
+Loss: 0.687, Acc: 0.000, Best Acc: 0.200
+Audio Acc: 0.000， Visual Acc: 0.200
+Epoch: 20:
+Start training ...
+Loss: 0.607, Acc: 0.000, Best Acc: 0.200
+Audio Acc: 0.000， Visual Acc: 0.200
+Epoch: 21:
+Start training ...
+Loss: 0.744, Acc: 0.000, Best Acc: 0.200
+Audio Acc: 0.000， Visual Acc: 0.100
+Epoch: 22:
+Start training ...
+Loss: 0.684, Acc: 0.000, Best Acc: 0.200
+Audio Acc: 0.000， Visual Acc: 0.100
+Epoch: 23:
+Start training ...
+Loss: 0.664, Acc: 0.000, Best Acc: 0.200
+Audio Acc: 0.000， Visual Acc: 0.100
+Epoch: 24:
+Start training ...
+Loss: 0.626, Acc: 0.000, Best Acc: 0.200
+Audio Acc: 0.000， Visual Acc: 0.100
+Epoch: 25:
+Start training ...
+Loss: 0.712, Acc: 0.000, Best Acc: 0.200
+Audio Acc: 0.000， Visual Acc: 0.200
+Epoch: 26:
+Start training ...
+Loss: 0.496, Acc: 0.000, Best Acc: 0.200
+Audio Acc: 0.000， Visual Acc: 0.200
+Epoch: 27:
+Start training ...
+Loss: 0.459, Acc: 0.000, Best Acc: 0.200
+Audio Acc: 0.000， Visual Acc: 0.200
+Epoch: 28:
+Start training ...
+Loss: 0.506, Acc: 0.000, Best Acc: 0.200
+Audio Acc: 0.000， Visual Acc: 0.200
+Epoch: 29:
+Start training ...
+Loss: 0.335, Acc: 0.000, Best Acc: 0.200
+Audio Acc: 0.000， Visual Acc: 0.200
+Epoch: 30:
+Start training ...
+Loss: 0.414, Acc: 0.000, Best Acc: 0.200
+Audio Acc: 0.000， Visual Acc: 0.200
+Epoch: 31:
+Start training ...
+Loss: 0.752, Acc: 0.000, Best Acc: 0.200
+Audio Acc: 0.000， Visual Acc: 0.200
+Epoch: 32:
+Start training ...
+Loss: 0.490, Acc: 0.100, Best Acc: 0.200
+Audio Acc: 0.000， Visual Acc: 0.200
+Epoch: 33:
+Start training ...
+Loss: 0.277, Acc: 0.200, Best Acc: 0.200
+Audio Acc: 0.000， Visual Acc: 0.300
+Epoch: 34:
+Start training ...
+Loss: 0.427, Acc: 0.000, Best Acc: 0.200
+Audio Acc: 0.000， Visual Acc: 0.200
+Epoch: 35:
+Start training ...
+Loss: 0.296, Acc: 0.000, Best Acc: 0.200
+Audio Acc: 0.000， Visual Acc: 0.300
+Epoch: 36:
+Start training ...
+Loss: 0.367, Acc: 0.000, Best Acc: 0.200
+Audio Acc: 0.000， Visual Acc: 0.200
+Epoch: 37:
+Start training ...
+Loss: 0.224, Acc: 0.000, Best Acc: 0.200
+Audio Acc: 0.000， Visual Acc: 0.200
+Epoch: 38:
+Start training ...
+Loss: 0.342, Acc: 0.000, Best Acc: 0.200
+Audio Acc: 0.000， Visual Acc: 0.200
+Epoch: 39:
+Start training ...
+Loss: 0.291, Acc: 0.100, Best Acc: 0.200
+Audio Acc: 0.000， Visual Acc: 0.200
+Epoch: 40:
+Start training ...
+Loss: 0.219, Acc: 0.200, Best Acc: 0.200
+Audio Acc: 0.000， Visual Acc: 0.300
+Epoch: 41:
+Start training ...
+Loss: 0.180, Acc: 0.200, Best Acc: 0.200
+Audio Acc: 0.000， Visual Acc: 0.300
+Epoch: 42:
+Start training ...
+Loss: 0.235, Acc: 0.200, Best Acc: 0.200
+Audio Acc: 0.000， Visual Acc: 0.300
+Epoch: 43:
+Start training ...
+Loss: 0.144, Acc: 0.000, Best Acc: 0.200
+Audio Acc: 0.000， Visual Acc: 0.300
+Epoch: 44:
+Start training ...
+Loss: 0.241, Acc: 0.000, Best Acc: 0.200
+Audio Acc: 0.000， Visual Acc: 0.300
+Epoch: 45:
+Start training ...
+Loss: 0.152, Acc: 0.000, Best Acc: 0.200
+Audio Acc: 0.000， Visual Acc: 0.300
+Epoch: 46:
+Start training ...
+Loss: 0.201, Acc: 0.000, Best Acc: 0.200
+Audio Acc: 0.000， Visual Acc: 0.300
+Epoch: 47:
+Start training ...
+Loss: 0.180, Acc: 0.000, Best Acc: 0.200
+Audio Acc: 0.000， Visual Acc: 0.200
+Epoch: 48:
+Start training ...
+Loss: 0.187, Acc: 0.100, Best Acc: 0.200
+Audio Acc: 0.000， Visual Acc: 0.200
+Epoch: 49:
+Start training ...
+Loss: 0.174, Acc: 0.100, Best Acc: 0.200
+Audio Acc: 0.000， Visual Acc: 0.200
+Epoch: 50:
+Start training ...
+Loss: 0.144, Acc: 0.100, Best Acc: 0.200
+Audio Acc: 0.100， Visual Acc: 0.200
+Epoch: 51:
+Start training ...
+Loss: 0.109, Acc: 0.100, Best Acc: 0.200
+Audio Acc: 0.100， Visual Acc: 0.200
+Epoch: 52:
+Start training ...
+Loss: 0.136, Acc: 0.200, Best Acc: 0.200
+Audio Acc: 0.100， Visual Acc: 0.300
+Epoch: 53:
+Start training ...
+Loss: 0.083, Acc: 0.200, Best Acc: 0.200
+Audio Acc: 0.100， Visual Acc: 0.300
+Epoch: 54:
+Start training ...
+Loss: 0.078, Acc: 0.200, Best Acc: 0.200
+Audio Acc: 0.100， Visual Acc: 0.300
+Epoch: 55:
+Start training ...
+Loss: 0.064, Acc: 0.200, Best Acc: 0.200
+Audio Acc: 0.200， Visual Acc: 0.400
+Epoch: 56:
+Start training ...
+Loss: 0.155, Acc: 0.200, Best Acc: 0.200
+Audio Acc: 0.100， Visual Acc: 0.400
+Epoch: 57:
+Start training ...
+Loss: 0.092, Acc: 0.200, Best Acc: 0.200
+Audio Acc: 0.100， Visual Acc: 0.400
+Epoch: 58:
+Start training ...
+Loss: 0.133, Acc: 0.200, Best Acc: 0.200
+Audio Acc: 0.100， Visual Acc: 0.400
+Epoch: 59:
+Start training ...
+Loss: 0.066, Acc: 0.200, Best Acc: 0.200
+Audio Acc: 0.100， Visual Acc: 0.400
+Epoch: 60:
+Start training ...
+Traceback (most recent call last):
+  File "/workspace/emotion_KD250628/MKD/CREMA_D_MKD/MKD/main.py", line 493, in <module>
+    main()
+  File "/workspace/emotion_KD250628/MKD/CREMA_D_MKD/MKD/main.py", line 399, in main
+    acc, acc_a, acc_v = valid(args, model, device, test_dataloader)
+  File "/workspace/emotion_KD250628/MKD/CREMA_D_MKD/MKD/main.py", line 256, in valid
+    for step, (spec, image, label) in enumerate(dataloader):
+  File "/opt/conda/lib/python3.10/site-packages/torch/utils/data/dataloader.py", line 630, in __next__
+    data = self._next_data()
+  File "/opt/conda/lib/python3.10/site-packages/torch/utils/data/dataloader.py", line 674, in _next_data
+    data = self._dataset_fetcher.fetch(index)  # may raise StopIteration
+  File "/opt/conda/lib/python3.10/site-packages/torch/utils/data/_utils/fetch.py", line 51, in fetch
+    data = [self.dataset[idx] for idx in possibly_batched_index]
+  File "/opt/conda/lib/python3.10/site-packages/torch/utils/data/_utils/fetch.py", line 51, in <listcomp>
+    data = [self.dataset[idx] for idx in possibly_batched_index]
+  File "/workspace/emotion_KD250628/MKD/CREMA_D_MKD/MKD/dataset/CramedDataset.py", line 67, in __getitem__
+    spectrogram = librosa.stft(resamples, n_fft=512, hop_length=353)
+  File "/opt/conda/lib/python3.10/site-packages/librosa/core/spectrum.py", line 387, in stft
+    stft_matrix[..., bl_s + off_start : bl_t + off_start] = fft.rfft(
+  File "/opt/conda/lib/python3.10/site-packages/scipy/fft/_backend.py", line 28, in __ua_function__
+    return fn(*args, **kwargs)
+  File "/opt/conda/lib/python3.10/site-packages/scipy/fft/_basic_backend.py", line 91, in rfft
+    return _execute_1D('rfft', _pocketfft.rfft, x, n=n, axis=axis, norm=norm,
+  File "/opt/conda/lib/python3.10/site-packages/scipy/fft/_basic_backend.py", line 32, in _execute_1D
+    return pocketfft_func(x, n=n, axis=axis, norm=norm,
+  File "/opt/conda/lib/python3.10/site-packages/scipy/fft/_pocketfft/basic.py", line 61, in r2c
+    return pfft.r2c(tmp, (axis,), forward, norm, None, workers)
+KeyboardInterrupt
+Exception ignored in atexit callback: <function _start_and_connect_service.<locals>.teardown_atexit at 0x7fd3c24adb40>
+Traceback (most recent call last):
+  File "/opt/conda/lib/python3.10/site-packages/wandb/sdk/lib/service_connection.py", line 94, in teardown_atexit
+    conn.teardown(hooks.exit_code)
+  File "/opt/conda/lib/python3.10/site-packages/wandb/sdk/lib/service_connection.py", line 226, in teardown
+    self._router.join()
+  File "/opt/conda/lib/python3.10/site-packages/wandb/sdk/interface/router.py", line 75, in join
+    self._thread.join()
+  File "/opt/conda/lib/python3.10/threading.py", line 1096, in join
+    self._wait_for_tstate_lock()
+  File "/opt/conda/lib/python3.10/threading.py", line 1116, in _wait_for_tstate_lock
+    if lock.acquire(block, timeout):
+KeyboardInterrupt:

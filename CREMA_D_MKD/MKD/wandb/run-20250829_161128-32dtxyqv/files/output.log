@@ -1,0 +1,105 @@
+Training unimodal model using audio modality
+audio
+Epoch: 0:
+Start training ...
+Loss: 2.322, Acc: 0.000, Best Acc: 0.000
+Epoch: 1:
+Start training ...
+Loss: 2.139, Acc: 0.000, Best Acc: 0.000
+Epoch: 2:
+Start training ...
+Loss: 1.984, Acc: 0.000, Best Acc: 0.000
+Epoch: 3:
+Start training ...
+Loss: 1.869, Acc: 0.000, Best Acc: 0.000
+Epoch: 4:
+Start training ...
+Loss: 1.791, Acc: 0.000, Best Acc: 0.000
+Epoch: 5:
+Start training ...
+Loss: 1.697, Acc: 0.000, Best Acc: 0.000
+Epoch: 6:
+Start training ...
+Loss: 1.612, Acc: 0.000, Best Acc: 0.000
+Epoch: 7:
+Start training ...
+Loss: 1.567, Acc: 0.000, Best Acc: 0.000
+Epoch: 8:
+Start training ...
+Loss: 1.454, Acc: 0.000, Best Acc: 0.000
+Epoch: 9:
+Start training ...
+Loss: 1.464, Acc: 0.000, Best Acc: 0.000
+Epoch: 10:
+Start training ...
+Loss: 1.339, Acc: 0.000, Best Acc: 0.000
+Epoch: 11:
+Start training ...
+Loss: 1.244, Acc: 0.000, Best Acc: 0.000
+Epoch: 12:
+Start training ...
+Loss: 1.073, Acc: 0.000, Best Acc: 0.000
+Epoch: 13:
+Start training ...
+Loss: 0.971, Acc: 0.000, Best Acc: 0.000
+Epoch: 14:
+Start training ...
+Loss: 0.879, Acc: 0.000, Best Acc: 0.000
+Epoch: 15:
+Start training ...
+Loss: 0.932, Acc: 0.000, Best Acc: 0.000
+Epoch: 16:
+Start training ...
+Loss: 0.793, Acc: 0.000, Best Acc: 0.000
+Epoch: 17:
+Start training ...
+Loss: 0.630, Acc: 0.000, Best Acc: 0.000
+Epoch: 18:
+Start training ...
+Loss: 0.772, Acc: 0.000, Best Acc: 0.000
+Epoch: 19:
+Start training ...
+Loss: 0.580, Acc: 0.000, Best Acc: 0.000
+Epoch: 20:
+Start training ...
+Loss: 0.435, Acc: 0.000, Best Acc: 0.000
+Epoch: 21:
+Start training ...
+Loss: 0.400, Acc: 0.000, Best Acc: 0.000
+Epoch: 22:
+Start training ...
+Loss: 0.267, Acc: 0.000, Best Acc: 0.000
+Epoch: 23:
+Start training ...
+Loss: 0.252, Acc: 0.000, Best Acc: 0.000
+Epoch: 24:
+Start training ...
+Loss: 0.348, Acc: 0.000, Best Acc: 0.000
+Epoch: 25:
+Start training ...
+Traceback (most recent call last):
+  File "/workspace/emotion_KD250628/MKD/CREMA_D_MKD/MKD/main.py", line 506, in <module>
+    main()
+  File "/workspace/emotion_KD250628/MKD/CREMA_D_MKD/MKD/main.py", line 405, in main
+    acc = valid(args, model, device, test_dataloader)
+  File "/workspace/emotion_KD250628/MKD/CREMA_D_MKD/MKD/main.py", line 232, in valid
+    for step, (spec, image, label) in enumerate(dataloader):
+  File "/opt/conda/lib/python3.10/site-packages/torch/utils/data/dataloader.py", line 630, in __next__
+    data = self._next_data()
+  File "/opt/conda/lib/python3.10/site-packages/torch/utils/data/dataloader.py", line 674, in _next_data
+    data = self._dataset_fetcher.fetch(index)  # may raise StopIteration
+  File "/opt/conda/lib/python3.10/site-packages/torch/utils/data/_utils/fetch.py", line 51, in fetch
+    data = [self.dataset[idx] for idx in possibly_batched_index]
+  File "/opt/conda/lib/python3.10/site-packages/torch/utils/data/_utils/fetch.py", line 51, in <listcomp>
+    data = [self.dataset[idx] for idx in possibly_batched_index]
+  File "/workspace/emotion_KD250628/MKD/CREMA_D_MKD/MKD/dataset/CramedDataset.py", line 62, in __getitem__
+    samples, rate = librosa.load(self.audio[idx], sr=22050)
+  File "/opt/conda/lib/python3.10/site-packages/librosa/core/audio.py", line 193, in load
+    y = resample(y, orig_sr=sr_native, target_sr=sr, res_type=res_type)
+  File "/opt/conda/lib/python3.10/site-packages/librosa/core/audio.py", line 669, in resample
+    y_hat = np.apply_along_axis(
+  File "/opt/conda/lib/python3.10/site-packages/numpy/lib/shape_base.py", line 379, in apply_along_axis
+    res = asanyarray(func1d(inarr_view[ind0], *args, **kwargs))
+  File "/opt/conda/lib/python3.10/site-packages/soxr/__init__.py", line 206, in resample
+    y = divide_proc(in_rate, out_rate, x[:, np.newaxis], q)
+KeyboardInterrupt

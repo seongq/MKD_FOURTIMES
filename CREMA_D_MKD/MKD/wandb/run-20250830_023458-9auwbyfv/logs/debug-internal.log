@@ -1,0 +1,17 @@
+{"time":"2025-08-30T02:34:58.4248051+09:00","level":"INFO","msg":"stream: starting","core version":"0.19.8","symlink path":"/workspace/emotion_KD250628/MKD/CREMA_D_MKD/MKD/wandb/run-20250830_023458-9auwbyfv/logs/debug-core.log"}
+{"time":"2025-08-30T02:34:58.538247395+09:00","level":"INFO","msg":"created new stream","id":"9auwbyfv"}
+{"time":"2025-08-30T02:34:58.538291425+09:00","level":"INFO","msg":"stream: started","id":"9auwbyfv"}
+{"time":"2025-08-30T02:34:58.538345411+09:00","level":"INFO","msg":"writer: Do: started","stream_id":"9auwbyfv"}
+{"time":"2025-08-30T02:34:58.538414203+09:00","level":"INFO","msg":"sender: started","stream_id":"9auwbyfv"}
+{"time":"2025-08-30T02:34:58.538479389+09:00","level":"INFO","msg":"handler: started","stream_id":"9auwbyfv"}
+{"time":"2025-08-30T02:34:58.940819514+09:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2025-08-30T05:34:39.228531399+09:00","level":"INFO","msg":"api: retrying HTTP error","status":502,"url":"https://api.wandb.ai/files/saql/MKD_gaja/9auwbyfv/file_stream","body":"\n<html><head>\n<meta http-equiv=\"content-type\" content=\"text/html;charset=utf-8\">\n<title>502 Server Error</title>\n</head>\n<body text=#000000 bgcolor=#ffffff>\n<h1>Error: Server Error</h1>\n<h2>The server encountered a temporary error and could not complete your request.<p>Please try again in 30 seconds.</h2>\n<h2></h2>\n</body></html>\n"}
+{"time":"2025-08-30T07:25:28.277132957+09:00","level":"INFO","msg":"api: retrying HTTP error","status":502,"url":"https://api.wandb.ai/files/saql/MKD_gaja/9auwbyfv/file_stream","body":"\n<html><head>\n<meta http-equiv=\"content-type\" content=\"text/html;charset=utf-8\">\n<title>502 Server Error</title>\n</head>\n<body text=#000000 bgcolor=#ffffff>\n<h1>Error: Server Error</h1>\n<h2>The server encountered a temporary error and could not complete your request.<p>Please try again in 30 seconds.</h2>\n<h2></h2>\n</body></html>\n"}
+{"time":"2025-08-30T13:11:02.793334715+09:00","level":"INFO","msg":"stream: closing","id":"9auwbyfv"}
+{"time":"2025-08-30T13:11:02.793392198+09:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2025-08-30T13:11:02.794331132+09:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2025-08-30T13:11:04.244927422+09:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2025-08-30T13:11:04.51997094+09:00","level":"INFO","msg":"handler: closed","stream_id":"9auwbyfv"}
+{"time":"2025-08-30T13:11:04.520028776+09:00","level":"INFO","msg":"sender: closed","stream_id":"9auwbyfv"}
+{"time":"2025-08-30T13:11:04.520048333+09:00","level":"INFO","msg":"writer: Close: closed","stream_id":"9auwbyfv"}
+{"time":"2025-08-30T13:11:04.520209836+09:00","level":"INFO","msg":"stream: closed","id":"9auwbyfv"}

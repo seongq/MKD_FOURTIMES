@@ -1,0 +1,82 @@
+Epoch: 0:
+Start training ...
+The best model has been saved at /workspace/emotion_KD250628/MKD/CREMA_D_MKD/MKD/ckpt/best_model_of_dataset_CREMAD_OGM_sum_alpha_0.5_optimizer_sgd_modulate_starts_0_ends_50_epoch_0_acc_0.1.pth.
+Loss: 2.472, Acc: 0.100
+Audio Acc: 0.100， Visual Acc: 0.000
+Epoch: 1:
+Start training ...
+Loss: 2.267, Acc: 0.100, Best Acc: 0.100
+Audio Acc: 0.100， Visual Acc: 0.200
+Epoch: 2:
+Start training ...
+Loss: 2.093, Acc: 0.100, Best Acc: 0.100
+Audio Acc: 0.300， Visual Acc: 0.200
+Epoch: 3:
+Start training ...
+The best model has been saved at /workspace/emotion_KD250628/MKD/CREMA_D_MKD/MKD/ckpt/best_model_of_dataset_CREMAD_OGM_sum_alpha_0.5_optimizer_sgd_modulate_starts_0_ends_50_epoch_3_acc_0.3.pth.
+Loss: 1.833, Acc: 0.300
+Audio Acc: 0.300， Visual Acc: 0.300
+Epoch: 4:
+Start training ...
+Loss: 1.901, Acc: 0.300, Best Acc: 0.300
+Audio Acc: 0.300， Visual Acc: 0.200
+Epoch: 5:
+Start training ...
+Loss: 1.612, Acc: 0.300, Best Acc: 0.300
+Audio Acc: 0.300， Visual Acc: 0.200
+Epoch: 6:
+Start training ...
+Loss: 1.504, Acc: 0.300, Best Acc: 0.300
+Audio Acc: 0.300， Visual Acc: 0.100
+Epoch: 7:
+Start training ...
+Loss: 1.516, Acc: 0.300, Best Acc: 0.300
+Audio Acc: 0.300， Visual Acc: 0.100
+Epoch: 8:
+Start training ...
+Loss: 1.429, Acc: 0.300, Best Acc: 0.300
+Audio Acc: 0.300， Visual Acc: 0.100
+Epoch: 9:
+Start training ...
+Loss: 1.282, Acc: 0.100, Best Acc: 0.300
+Audio Acc: 0.100， Visual Acc: 0.100
+Epoch: 10:
+Start training ...
+Loss: 1.017, Acc: 0.000, Best Acc: 0.300
+Audio Acc: 0.000， Visual Acc: 0.100
+Epoch: 11:
+Start training ...
+Loss: 1.144, Acc: 0.000, Best Acc: 0.300
+Audio Acc: 0.000， Visual Acc: 0.100
+Epoch: 12:
+Start training ...
+Loss: 0.921, Acc: 0.000, Best Acc: 0.300
+Audio Acc: 0.000， Visual Acc: 0.100
+Epoch: 13:
+Start training ...
+Loss: 1.683, Acc: 0.000, Best Acc: 0.300
+Audio Acc: 0.000， Visual Acc: 0.200
+Epoch: 14:
+Start training ...
+Traceback (most recent call last):
+  File "/workspace/emotion_KD250628/MKD/CREMA_D_MKD/MKD/main.py", line 506, in <module>
+    main()
+  File "/workspace/emotion_KD250628/MKD/CREMA_D_MKD/MKD/main.py", line 410, in main
+    acc, acc_a, acc_v = valid(args, model, device, test_dataloader)
+  File "/workspace/emotion_KD250628/MKD/CREMA_D_MKD/MKD/main.py", line 267, in valid
+    for step, (spec, image, label) in enumerate(dataloader):
+  File "/opt/conda/lib/python3.10/site-packages/torch/utils/data/dataloader.py", line 630, in __next__
+    data = self._next_data()
+  File "/opt/conda/lib/python3.10/site-packages/torch/utils/data/dataloader.py", line 674, in _next_data
+    data = self._dataset_fetcher.fetch(index)  # may raise StopIteration
+  File "/opt/conda/lib/python3.10/site-packages/torch/utils/data/_utils/fetch.py", line 51, in fetch
+    data = [self.dataset[idx] for idx in possibly_batched_index]
+  File "/opt/conda/lib/python3.10/site-packages/torch/utils/data/_utils/fetch.py", line 51, in <listcomp>
+    data = [self.dataset[idx] for idx in possibly_batched_index]
+  File "/workspace/emotion_KD250628/MKD/CREMA_D_MKD/MKD/dataset/CramedDataset.py", line 97, in __getitem__
+    img = Image.open(os.path.join(self.image[idx], image_samples[SELECTED])).convert('RGB')
+  File "/opt/conda/lib/python3.10/site-packages/PIL/Image.py", line 911, in convert
+    self.load()
+  File "/opt/conda/lib/python3.10/site-packages/PIL/ImageFile.py", line 269, in load
+    n, err_code = decoder.decode(b)
+KeyboardInterrupt

@@ -10,14 +10,9 @@ class AVClassifier(nn.Module):
         super(AVClassifier, self).__init__()
 
         fusion = args.fusion_method
-        if args.dataset == 'VGGSound':
-            n_classes = 309
-        elif args.dataset == 'KineticSound':
-            n_classes = 31
-        elif args.dataset == 'CREMAD':
+        if args.dataset == 'CREMAD':
             n_classes = 6
-        elif args.dataset == 'AVE':
-            n_classes = 28
+        
         else:
             raise NotImplementedError('Incorrect dataset name {}'.format(args.dataset))
 
@@ -34,6 +29,8 @@ class AVClassifier(nn.Module):
 
         self.audio_net = resnet18(modality='audio')
         self.visual_net = resnet18(modality='visual')
+        self.audio_classifier = nn.Linear(512, n_classes)
+        self.visual_classifier = nn.Linear(512, n_classes)
 
     def forward(self, audio, visual):
 
@@ -51,6 +48,59 @@ class AVClassifier(nn.Module):
         a = torch.flatten(a, 1)
         v = torch.flatten(v, 1)
         
+        out_a = self.audio_classifier(a)
+        out_v = self.visual_classifier(v)
+       
         a, v, out = self.fusion_module(a, v)
-        print(out.size())
-        return a, v, out
+        # print(out.size())
+        return a, v, out, out_a, out_v
+
+
+
+class UNIMODALClassifier(nn.Module):
+    def __init__(self, args):
+        super(UNIMODALClassifier, self).__init__()
+
+        fusion = args.fusion_method
+        # if args.dataset == 'CREMAD':
+        n_classes = 6
+        
+        # else:
+        #     raise NotImplementedError('Incorrect dataset name {}'.format(args.dataset))
+
+        self.unimodal = args.unimodal_modality
+        
+        if self.unimodal == "audio":
+            self.audio_net = resnet18(modality='audio')
+            self.audio_classifier = nn.Linear(512, n_classes)
+        
+        elif self.unimodal == "visual":
+            self.visual_net = resnet18(modality='visual')
+            self.visual_classifier = nn.Linear(512, n_classes)
+            
+        else:
+            raise NotImplementedError('Incorrect unimodal modality: {}!'.format(self.unimodal))
+        
+        print(self.unimodal)
+
+    def forward(self, audio, visual):
+        if self.unimodal == 'audio':
+            a = self.audio_net(audio)
+            B = a.size()[0]
+            a = F.adaptive_avg_pool2d(a, 1)
+            a = torch.flatten(a, 1)
+            out_a = self.audio_classifier(a)
+            return a, out_a
+        if self.unimodal == 'visual':    
+            v = self.visual_net(visual)
+            B = v.size()[0]
+            (_, C, H, W) = v.size()
+            v = v.view(B, -1, C, H, W)
+            v = v.permute(0, 2, 1, 3, 4)
+            v = F.adaptive_avg_pool3d(v, 1)
+            v = torch.flatten(v, 1)
+            out_v = self.visual_classifier(v)
+            return v, out_v
+
+        
+        

@@ -1,0 +1,55 @@
+Epoch: 0:
+Start training ...
+The best model has been saved at /workspace/emotion_KD250628/MKD/CREMA_D_MKD/MKD/ckpt/best_model_of_dataset_CREMAD_Normal_sum_alpha_0.5_optimizer_sgd_modulate_starts_0_ends_50_epoch_0_acc_0.28225806451612906_20250901093559.pth.
+Loss: 1.594, Acc: 0.282
+Audio Acc: 0.266， Visual Acc: 0.172
+Epoch: 1:
+Start training ...
+The best model has been saved at /workspace/emotion_KD250628/MKD/CREMA_D_MKD/MKD/ckpt/best_model_of_dataset_CREMAD_Normal_sum_alpha_0.5_optimizer_sgd_modulate_starts_0_ends_50_epoch_1_acc_0.37231182795698925_20250901093559.pth.
+Loss: 1.416, Acc: 0.372
+Audio Acc: 0.348， Visual Acc: 0.173
+Epoch: 2:
+Start training ...
+The best model has been saved at /workspace/emotion_KD250628/MKD/CREMA_D_MKD/MKD/ckpt/best_model_of_dataset_CREMAD_Normal_sum_alpha_0.5_optimizer_sgd_modulate_starts_0_ends_50_epoch_2_acc_0.41935483870967744_20250901093559.pth.
+Loss: 1.342, Acc: 0.419
+Audio Acc: 0.387， Visual Acc: 0.177
+Epoch: 3:
+Start training ...
+Loss: 1.263, Acc: 0.293, Best Acc: 0.419
+Audio Acc: 0.313， Visual Acc: 0.172
+Epoch: 4:
+Start training ...
+The best model has been saved at /workspace/emotion_KD250628/MKD/CREMA_D_MKD/MKD/ckpt/best_model_of_dataset_CREMAD_Normal_sum_alpha_0.5_optimizer_sgd_modulate_starts_0_ends_50_epoch_4_acc_0.5040322580645161_20250901093559.pth.
+Loss: 1.178, Acc: 0.504
+Audio Acc: 0.468， Visual Acc: 0.185
+Epoch: 5:
+Start training ...
+Loss: 1.079, Acc: 0.335, Best Acc: 0.504
+Audio Acc: 0.319， Visual Acc: 0.180
+Epoch: 6:
+Start training ...
+Loss: 0.996, Acc: 0.372, Best Acc: 0.504
+Audio Acc: 0.407， Visual Acc: 0.180
+Epoch: 7:
+Start training ...
+Loss: 0.918, Acc: 0.489, Best Acc: 0.504
+Audio Acc: 0.489， Visual Acc: 0.188
+Epoch: 8:
+Start training ...
+Loss: 0.846, Acc: 0.433, Best Acc: 0.504
+Audio Acc: 0.425， Visual Acc: 0.188
+Epoch: 9:
+Start training ...
+Loss: 0.756, Acc: 0.402, Best Acc: 0.504
+Audio Acc: 0.383， Visual Acc: 0.180
+Epoch: 10:
+Start training ...
+Loss: 0.674, Acc: 0.437, Best Acc: 0.504
+Audio Acc: 0.370， Visual Acc: 0.185
+Epoch: 11:
+Start training ...
+The best model has been saved at /workspace/emotion_KD250628/MKD/CREMA_D_MKD/MKD/ckpt/best_model_of_dataset_CREMAD_Normal_sum_alpha_0.5_optimizer_sgd_modulate_starts_0_ends_50_epoch_11_acc_0.5362903225806451_20250901093559.pth.
+Loss: 0.560, Acc: 0.536
+Audio Acc: 0.484， Visual Acc: 0.191
+Epoch: 12:
+Start training ...

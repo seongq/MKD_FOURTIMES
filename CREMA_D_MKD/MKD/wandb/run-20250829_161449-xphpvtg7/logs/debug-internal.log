@@ -1,0 +1,7 @@
+{"time":"2025-08-29T16:14:49.749537866+09:00","level":"INFO","msg":"stream: starting","core version":"0.19.8","symlink path":"/workspace/emotion_KD250628/MKD/CREMA_D_MKD/MKD/wandb/run-20250829_161449-xphpvtg7/logs/debug-core.log"}
+{"time":"2025-08-29T16:14:49.859287264+09:00","level":"INFO","msg":"created new stream","id":"xphpvtg7"}
+{"time":"2025-08-29T16:14:49.859349622+09:00","level":"INFO","msg":"stream: started","id":"xphpvtg7"}
+{"time":"2025-08-29T16:14:49.859414489+09:00","level":"INFO","msg":"writer: Do: started","stream_id":"xphpvtg7"}
+{"time":"2025-08-29T16:14:49.859443154+09:00","level":"INFO","msg":"sender: started","stream_id":"xphpvtg7"}
+{"time":"2025-08-29T16:14:49.85956079+09:00","level":"INFO","msg":"handler: started","stream_id":"xphpvtg7"}
+{"time":"2025-08-29T16:14:50.276027779+09:00","level":"INFO","msg":"Starting system monitor"}

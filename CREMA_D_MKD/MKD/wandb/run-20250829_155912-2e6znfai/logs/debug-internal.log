@@ -1,0 +1,7 @@
+{"time":"2025-08-29T15:59:12.714733355+09:00","level":"INFO","msg":"stream: starting","core version":"0.19.8","symlink path":"/workspace/emotion_KD250628/MKD/CREMA_D_MKD/MKD/wandb/run-20250829_155912-2e6znfai/logs/debug-core.log"}
+{"time":"2025-08-29T15:59:12.825467609+09:00","level":"INFO","msg":"created new stream","id":"2e6znfai"}
+{"time":"2025-08-29T15:59:12.825576037+09:00","level":"INFO","msg":"stream: started","id":"2e6znfai"}
+{"time":"2025-08-29T15:59:12.825670424+09:00","level":"INFO","msg":"writer: Do: started","stream_id":"2e6znfai"}
+{"time":"2025-08-29T15:59:12.825711084+09:00","level":"INFO","msg":"handler: started","stream_id":"2e6znfai"}
+{"time":"2025-08-29T15:59:12.825837155+09:00","level":"INFO","msg":"sender: started","stream_id":"2e6znfai"}
+{"time":"2025-08-29T15:59:13.17130367+09:00","level":"INFO","msg":"Starting system monitor"}

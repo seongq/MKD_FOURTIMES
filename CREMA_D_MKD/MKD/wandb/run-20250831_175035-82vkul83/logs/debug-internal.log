@@ -1,0 +1,15 @@
+{"time":"2025-08-31T17:50:35.649799935+09:00","level":"INFO","msg":"stream: starting","core version":"0.19.8","symlink path":"/workspace/emotion_KD250628/MKD/CREMA_D_MKD/MKD/wandb/run-20250831_175035-82vkul83/logs/debug-core.log"}
+{"time":"2025-08-31T17:50:35.761734631+09:00","level":"INFO","msg":"created new stream","id":"82vkul83"}
+{"time":"2025-08-31T17:50:35.761759495+09:00","level":"INFO","msg":"stream: started","id":"82vkul83"}
+{"time":"2025-08-31T17:50:35.761863278+09:00","level":"INFO","msg":"writer: Do: started","stream_id":"82vkul83"}
+{"time":"2025-08-31T17:50:35.761966861+09:00","level":"INFO","msg":"sender: started","stream_id":"82vkul83"}
+{"time":"2025-08-31T17:50:35.762040731+09:00","level":"INFO","msg":"handler: started","stream_id":"82vkul83"}
+{"time":"2025-08-31T17:50:36.147767405+09:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2025-08-31T22:49:51.767986853+09:00","level":"INFO","msg":"stream: closing","id":"82vkul83"}
+{"time":"2025-08-31T22:49:51.768027188+09:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2025-08-31T22:49:51.768974206+09:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2025-08-31T22:49:52.545599006+09:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2025-08-31T22:49:52.817559157+09:00","level":"INFO","msg":"handler: closed","stream_id":"82vkul83"}
+{"time":"2025-08-31T22:49:52.817632769+09:00","level":"INFO","msg":"writer: Close: closed","stream_id":"82vkul83"}
+{"time":"2025-08-31T22:49:52.817691407+09:00","level":"INFO","msg":"sender: closed","stream_id":"82vkul83"}
+{"time":"2025-08-31T22:49:52.817831741+09:00","level":"INFO","msg":"stream: closed","id":"82vkul83"}

@@ -1,0 +1,15 @@
+{"time":"2025-08-29T16:15:08.938439193+09:00","level":"INFO","msg":"stream: starting","core version":"0.19.8","symlink path":"/workspace/emotion_KD250628/MKD/CREMA_D_MKD/MKD/wandb/run-20250829_161508-wrfgi8ao/logs/debug-core.log"}
+{"time":"2025-08-29T16:15:09.049950537+09:00","level":"INFO","msg":"created new stream","id":"wrfgi8ao"}
+{"time":"2025-08-29T16:15:09.050189264+09:00","level":"INFO","msg":"stream: started","id":"wrfgi8ao"}
+{"time":"2025-08-29T16:15:09.050379093+09:00","level":"INFO","msg":"writer: Do: started","stream_id":"wrfgi8ao"}
+{"time":"2025-08-29T16:15:09.050425331+09:00","level":"INFO","msg":"handler: started","stream_id":"wrfgi8ao"}
+{"time":"2025-08-29T16:15:09.050456353+09:00","level":"INFO","msg":"sender: started","stream_id":"wrfgi8ao"}
+{"time":"2025-08-29T16:15:09.511305731+09:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2025-08-29T16:15:21.716424515+09:00","level":"INFO","msg":"stream: closing","id":"wrfgi8ao"}
+{"time":"2025-08-29T16:15:21.716481335+09:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2025-08-29T16:15:21.717850214+09:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2025-08-29T16:15:22.684070731+09:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2025-08-29T16:15:22.977614179+09:00","level":"INFO","msg":"handler: closed","stream_id":"wrfgi8ao"}
+{"time":"2025-08-29T16:15:22.977667689+09:00","level":"INFO","msg":"writer: Close: closed","stream_id":"wrfgi8ao"}
+{"time":"2025-08-29T16:15:22.977695678+09:00","level":"INFO","msg":"sender: closed","stream_id":"wrfgi8ao"}
+{"time":"2025-08-29T16:15:22.977740412+09:00","level":"INFO","msg":"stream: closed","id":"wrfgi8ao"}

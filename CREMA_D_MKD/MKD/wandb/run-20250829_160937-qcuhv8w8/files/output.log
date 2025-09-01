@@ -1,0 +1,65 @@
+Training unimodal model using audio modality
+audio
+Epoch: 0:
+Start training ...
+The best model has been saved at /workspace/emotion_KD250628/MKD/CREMA_D_MKD/MKD/ckpt/best_model_of_dataset_CREMAD_unimodal_audio_optimizer_sgd_epoch_0_acc_0.2.pth.
+Loss: 2.070, Acc: 0.200
+Epoch: 1:
+Start training ...
+Loss: 2.013, Acc: 0.000, Best Acc: 0.200
+Epoch: 2:
+Start training ...
+Loss: 1.985, Acc: 0.000, Best Acc: 0.200
+Epoch: 3:
+Start training ...
+Loss: 1.854, Acc: 0.000, Best Acc: 0.200
+Epoch: 4:
+Start training ...
+Loss: 1.722, Acc: 0.000, Best Acc: 0.200
+Epoch: 5:
+Start training ...
+Loss: 1.649, Acc: 0.000, Best Acc: 0.200
+Epoch: 6:
+Start training ...
+Loss: 1.572, Acc: 0.000, Best Acc: 0.200
+Epoch: 7:
+Start training ...
+Loss: 1.469, Acc: 0.000, Best Acc: 0.200
+Epoch: 8:
+Start training ...
+Loss: 1.401, Acc: 0.000, Best Acc: 0.200
+Epoch: 9:
+Start training ...
+Loss: 1.463, Acc: 0.000, Best Acc: 0.200
+Epoch: 10:
+Start training ...
+Loss: 1.342, Acc: 0.000, Best Acc: 0.200
+Epoch: 11:
+Start training ...
+Loss: 1.181, Acc: 0.000, Best Acc: 0.200
+Epoch: 12:
+Start training ...
+Loss: 1.341, Acc: 0.000, Best Acc: 0.200
+Epoch: 13:
+Start training ...
+Loss: 1.309, Acc: 0.000, Best Acc: 0.200
+Epoch: 14:
+Start training ...
+Traceback (most recent call last):
+  File "/workspace/emotion_KD250628/MKD/CREMA_D_MKD/MKD/main.py", line 506, in <module>
+    main()
+  File "/workspace/emotion_KD250628/MKD/CREMA_D_MKD/MKD/main.py", line 403, in main
+    batch_loss, global_step = train_epoch(args, epoch, model, device,
+  File "/workspace/emotion_KD250628/MKD/CREMA_D_MKD/MKD/main.py", line 77, in train_epoch
+    for step, (spec, image, label) in enumerate(dataloader):
+  File "/opt/conda/lib/python3.10/site-packages/torch/utils/data/dataloader.py", line 630, in __next__
+    data = self._next_data()
+  File "/opt/conda/lib/python3.10/site-packages/torch/utils/data/dataloader.py", line 674, in _next_data
+    data = self._dataset_fetcher.fetch(index)  # may raise StopIteration
+  File "/opt/conda/lib/python3.10/site-packages/torch/utils/data/_utils/fetch.py", line 51, in fetch
+    data = [self.dataset[idx] for idx in possibly_batched_index]
+  File "/opt/conda/lib/python3.10/site-packages/torch/utils/data/_utils/fetch.py", line 51, in <listcomp>
+    data = [self.dataset[idx] for idx in possibly_batched_index]
+  File "/workspace/emotion_KD250628/MKD/CREMA_D_MKD/MKD/dataset/CramedDataset.py", line 91, in __getitem__
+    images = torch.zeros((self.args.fps, 3, 224, 224))
+KeyboardInterrupt

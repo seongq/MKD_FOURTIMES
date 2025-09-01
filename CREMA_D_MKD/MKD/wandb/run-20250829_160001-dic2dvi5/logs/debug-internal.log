@@ -1,0 +1,15 @@
+{"time":"2025-08-29T16:00:01.234003388+09:00","level":"INFO","msg":"stream: starting","core version":"0.19.8","symlink path":"/workspace/emotion_KD250628/MKD/CREMA_D_MKD/MKD/wandb/run-20250829_160001-dic2dvi5/logs/debug-core.log"}
+{"time":"2025-08-29T16:00:01.345972538+09:00","level":"INFO","msg":"created new stream","id":"dic2dvi5"}
+{"time":"2025-08-29T16:00:01.346170605+09:00","level":"INFO","msg":"stream: started","id":"dic2dvi5"}
+{"time":"2025-08-29T16:00:01.346310208+09:00","level":"INFO","msg":"handler: started","stream_id":"dic2dvi5"}
+{"time":"2025-08-29T16:00:01.346341312+09:00","level":"INFO","msg":"sender: started","stream_id":"dic2dvi5"}
+{"time":"2025-08-29T16:00:01.34631484+09:00","level":"INFO","msg":"writer: Do: started","stream_id":"dic2dvi5"}
+{"time":"2025-08-29T16:00:01.870101179+09:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2025-08-29T16:00:08.361698693+09:00","level":"INFO","msg":"stream: closing","id":"dic2dvi5"}
+{"time":"2025-08-29T16:00:08.36174198+09:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2025-08-29T16:00:08.362553094+09:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2025-08-29T16:00:09.345979307+09:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2025-08-29T16:00:09.64815392+09:00","level":"INFO","msg":"handler: closed","stream_id":"dic2dvi5"}
+{"time":"2025-08-29T16:00:09.648211706+09:00","level":"INFO","msg":"sender: closed","stream_id":"dic2dvi5"}
+{"time":"2025-08-29T16:00:09.648204007+09:00","level":"INFO","msg":"writer: Close: closed","stream_id":"dic2dvi5"}
+{"time":"2025-08-29T16:00:09.648284031+09:00","level":"INFO","msg":"stream: closed","id":"dic2dvi5"}

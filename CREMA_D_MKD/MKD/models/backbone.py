@@ -156,8 +156,8 @@ class ResNet(nn.Module):
         x = self.layer3(x)
         x = self.layer4(x)
         out = x
-        print(out.shape)
-        print(self.modality)
+        # print(out.shape)
+        # print(self.modality)
         return out
 
 

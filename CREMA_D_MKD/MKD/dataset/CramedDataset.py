@@ -95,6 +95,7 @@ class CramedDataset(Dataset):
         # print(SELECTED)
         for i in range(self.args.fps):
             img = Image.open(os.path.join(self.image[idx], image_samples[SELECTED])).convert('RGB')
+            # print(os.path.join(self.image[idx], image_samples[SELECTED]))
             img = transform(img)
             images[i] = img
 

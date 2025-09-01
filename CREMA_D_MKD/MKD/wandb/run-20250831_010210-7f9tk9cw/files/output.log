@@ -1,0 +1,820 @@
+Epoch: 0:
+Start training ...
+The best model has been saved at /workspace/emotion_KD250628/MKD/CREMA_D_MKD/MKD/ckpt/best_model_of_dataset_CREMAD_OGM_concat_alpha_0.5_optimizer_sgd_modulate_starts_0_ends_50_epoch_0_acc_0.35618279569892475_20250831010209.pth.
+Loss: 1.623, Acc: 0.356
+Audio Acc: 0.261， Visual Acc: 0.153
+Epoch: 1:
+Start training ...
+Loss: 1.491, Acc: 0.356, Best Acc: 0.356
+Audio Acc: 0.281， Visual Acc: 0.153
+Epoch: 2:
+Start training ...
+The best model has been saved at /workspace/emotion_KD250628/MKD/CREMA_D_MKD/MKD/ckpt/best_model_of_dataset_CREMAD_OGM_concat_alpha_0.5_optimizer_sgd_modulate_starts_0_ends_50_epoch_2_acc_0.37231182795698925_20250831010209.pth.
+Loss: 1.447, Acc: 0.372
+Audio Acc: 0.241， Visual Acc: 0.153
+Epoch: 3:
+Start training ...
+The best model has been saved at /workspace/emotion_KD250628/MKD/CREMA_D_MKD/MKD/ckpt/best_model_of_dataset_CREMAD_OGM_concat_alpha_0.5_optimizer_sgd_modulate_starts_0_ends_50_epoch_3_acc_0.42876344086021506_20250831010209.pth.
+Loss: 1.417, Acc: 0.429
+Audio Acc: 0.313， Visual Acc: 0.149
+Epoch: 4:
+Start training ...
+Loss: 1.396, Acc: 0.429, Best Acc: 0.429
+Audio Acc: 0.263， Visual Acc: 0.153
+Epoch: 5:
+Start training ...
+Loss: 1.364, Acc: 0.415, Best Acc: 0.429
+Audio Acc: 0.336， Visual Acc: 0.153
+Epoch: 6:
+Start training ...
+Loss: 1.340, Acc: 0.426, Best Acc: 0.429
+Audio Acc: 0.280， Visual Acc: 0.153
+Epoch: 7:
+Start training ...
+The best model has been saved at /workspace/emotion_KD250628/MKD/CREMA_D_MKD/MKD/ckpt/best_model_of_dataset_CREMAD_OGM_concat_alpha_0.5_optimizer_sgd_modulate_starts_0_ends_50_epoch_7_acc_0.4596774193548387_20250831010209.pth.
+Loss: 1.314, Acc: 0.460
+Audio Acc: 0.325， Visual Acc: 0.153
+Epoch: 8:
+Start training ...
+The best model has been saved at /workspace/emotion_KD250628/MKD/CREMA_D_MKD/MKD/ckpt/best_model_of_dataset_CREMAD_OGM_concat_alpha_0.5_optimizer_sgd_modulate_starts_0_ends_50_epoch_8_acc_0.46639784946236557_20250831010209.pth.
+Loss: 1.293, Acc: 0.466
+Audio Acc: 0.358， Visual Acc: 0.153
+Epoch: 9:
+Start training ...
+Loss: 1.261, Acc: 0.454, Best Acc: 0.466
+Audio Acc: 0.343， Visual Acc: 0.160
+Epoch: 10:
+Start training ...
+Loss: 1.244, Acc: 0.448, Best Acc: 0.466
+Audio Acc: 0.265， Visual Acc: 0.155
+Epoch: 11:
+Start training ...
+The best model has been saved at /workspace/emotion_KD250628/MKD/CREMA_D_MKD/MKD/ckpt/best_model_of_dataset_CREMAD_OGM_concat_alpha_0.5_optimizer_sgd_modulate_starts_0_ends_50_epoch_11_acc_0.46774193548387094_20250831010209.pth.
+Loss: 1.196, Acc: 0.468
+Audio Acc: 0.351， Visual Acc: 0.173
+Epoch: 12:
+Start training ...
+The best model has been saved at /workspace/emotion_KD250628/MKD/CREMA_D_MKD/MKD/ckpt/best_model_of_dataset_CREMAD_OGM_concat_alpha_0.5_optimizer_sgd_modulate_starts_0_ends_50_epoch_12_acc_0.4838709677419355_20250831010209.pth.
+Loss: 1.166, Acc: 0.484
+Audio Acc: 0.261， Visual Acc: 0.175
+Epoch: 13:
+Start training ...
+The best model has been saved at /workspace/emotion_KD250628/MKD/CREMA_D_MKD/MKD/ckpt/best_model_of_dataset_CREMAD_OGM_concat_alpha_0.5_optimizer_sgd_modulate_starts_0_ends_50_epoch_13_acc_0.5255376344086021_20250831010209.pth.
+Loss: 1.116, Acc: 0.526
+Audio Acc: 0.324， Visual Acc: 0.191
+Epoch: 14:
+Start training ...
+Loss: 1.091, Acc: 0.433, Best Acc: 0.526
+Audio Acc: 0.191， Visual Acc: 0.165
+Epoch: 15:
+Start training ...
+The best model has been saved at /workspace/emotion_KD250628/MKD/CREMA_D_MKD/MKD/ckpt/best_model_of_dataset_CREMAD_OGM_concat_alpha_0.5_optimizer_sgd_modulate_starts_0_ends_50_epoch_15_acc_0.5362903225806451_20250831010209.pth.
+Loss: 1.041, Acc: 0.536
+Audio Acc: 0.289， Visual Acc: 0.230
+Epoch: 16:
+Start training ...
+Loss: 0.983, Acc: 0.474, Best Acc: 0.536
+Audio Acc: 0.363， Visual Acc: 0.227
+Epoch: 17:
+Start training ...
+The best model has been saved at /workspace/emotion_KD250628/MKD/CREMA_D_MKD/MKD/ckpt/best_model_of_dataset_CREMAD_OGM_concat_alpha_0.5_optimizer_sgd_modulate_starts_0_ends_50_epoch_17_acc_0.5685483870967742_20250831010209.pth.
+Loss: 0.930, Acc: 0.569
+Audio Acc: 0.272， Visual Acc: 0.249
+Epoch: 18:
+Start training ...
+Loss: 0.892, Acc: 0.332, Best Acc: 0.569
+Audio Acc: 0.372， Visual Acc: 0.185
+Epoch: 19:
+Start training ...
+The best model has been saved at /workspace/emotion_KD250628/MKD/CREMA_D_MKD/MKD/ckpt/best_model_of_dataset_CREMAD_OGM_concat_alpha_0.5_optimizer_sgd_modulate_starts_0_ends_50_epoch_19_acc_0.5887096774193549_20250831010209.pth.
+Loss: 0.846, Acc: 0.589
+Audio Acc: 0.297， Visual Acc: 0.231
+Epoch: 20:
+Start training ...
+Loss: 0.777, Acc: 0.534, Best Acc: 0.589
+Audio Acc: 0.306， Visual Acc: 0.234
+Epoch: 21:
+Start training ...
+The best model has been saved at /workspace/emotion_KD250628/MKD/CREMA_D_MKD/MKD/ckpt/best_model_of_dataset_CREMAD_OGM_concat_alpha_0.5_optimizer_sgd_modulate_starts_0_ends_50_epoch_21_acc_0.6102150537634409_20250831010209.pth.
+Loss: 0.739, Acc: 0.610
+Audio Acc: 0.249， Visual Acc: 0.208
+Epoch: 22:
+Start training ...
+Loss: 0.676, Acc: 0.508, Best Acc: 0.610
+Audio Acc: 0.344， Visual Acc: 0.220
+Epoch: 23:
+Start training ...
+Loss: 0.658, Acc: 0.340, Best Acc: 0.610
+Audio Acc: 0.164， Visual Acc: 0.241
+Epoch: 24:
+Start training ...
+Loss: 0.597, Acc: 0.382, Best Acc: 0.610
+Audio Acc: 0.297， Visual Acc: 0.187
+Epoch: 25:
+Start training ...
+Loss: 0.514, Acc: 0.489, Best Acc: 0.610
+Audio Acc: 0.191， Visual Acc: 0.226
+Epoch: 26:
+Start training ...
+Loss: 0.477, Acc: 0.560, Best Acc: 0.610
+Audio Acc: 0.341， Visual Acc: 0.218
+Epoch: 27:
+Start training ...
+Loss: 0.421, Acc: 0.352, Best Acc: 0.610
+Audio Acc: 0.336， Visual Acc: 0.270
+Epoch: 28:
+Start training ...
+Loss: 0.372, Acc: 0.566, Best Acc: 0.610
+Audio Acc: 0.278， Visual Acc: 0.265
+Epoch: 29:
+Start training ...
+Loss: 0.322, Acc: 0.472, Best Acc: 0.610
+Audio Acc: 0.220， Visual Acc: 0.259
+Epoch: 30:
+Start training ...
+Loss: 0.291, Acc: 0.508, Best Acc: 0.610
+Audio Acc: 0.352， Visual Acc: 0.262
+Epoch: 31:
+Start training ...
+Loss: 0.245, Acc: 0.562, Best Acc: 0.610
+Audio Acc: 0.267， Visual Acc: 0.266
+Epoch: 32:
+Start training ...
+Loss: 0.215, Acc: 0.554, Best Acc: 0.610
+Audio Acc: 0.234， Visual Acc: 0.272
+Epoch: 33:
+Start training ...
+Loss: 0.176, Acc: 0.547, Best Acc: 0.610
+Audio Acc: 0.390， Visual Acc: 0.191
+Epoch: 34:
+Start training ...
+Loss: 0.151, Acc: 0.569, Best Acc: 0.610
+Audio Acc: 0.348， Visual Acc: 0.203
+Epoch: 35:
+Start training ...
+Loss: 0.148, Acc: 0.598, Best Acc: 0.610
+Audio Acc: 0.341， Visual Acc: 0.254
+Epoch: 36:
+Start training ...
+Loss: 0.125, Acc: 0.589, Best Acc: 0.610
+Audio Acc: 0.257， Visual Acc: 0.259
+Epoch: 37:
+Start training ...
+Loss: 0.111, Acc: 0.484, Best Acc: 0.610
+Audio Acc: 0.344， Visual Acc: 0.242
+Epoch: 38:
+Start training ...
+Loss: 0.097, Acc: 0.593, Best Acc: 0.610
+Audio Acc: 0.360， Visual Acc: 0.292
+Epoch: 39:
+Start training ...
+Loss: 0.081, Acc: 0.583, Best Acc: 0.610
+Audio Acc: 0.364， Visual Acc: 0.242
+Epoch: 40:
+Start training ...
+Loss: 0.074, Acc: 0.609, Best Acc: 0.610
+Audio Acc: 0.333， Visual Acc: 0.284
+Epoch: 41:
+Start training ...
+Loss: 0.071, Acc: 0.603, Best Acc: 0.610
+Audio Acc: 0.270， Visual Acc: 0.281
+Epoch: 42:
+Start training ...
+Loss: 0.062, Acc: 0.601, Best Acc: 0.610
+Audio Acc: 0.336， Visual Acc: 0.231
+Epoch: 43:
+Start training ...
+Loss: 0.065, Acc: 0.587, Best Acc: 0.610
+Audio Acc: 0.337， Visual Acc: 0.274
+Epoch: 44:
+Start training ...
+The best model has been saved at /workspace/emotion_KD250628/MKD/CREMA_D_MKD/MKD/ckpt/best_model_of_dataset_CREMAD_OGM_concat_alpha_0.5_optimizer_sgd_modulate_starts_0_ends_50_epoch_44_acc_0.6317204301075269_20250831010209.pth.
+Loss: 0.059, Acc: 0.632
+Audio Acc: 0.348， Visual Acc: 0.247
+Epoch: 45:
+Start training ...
+Loss: 0.053, Acc: 0.562, Best Acc: 0.632
+Audio Acc: 0.340， Visual Acc: 0.270
+Epoch: 46:
+Start training ...
+Loss: 0.051, Acc: 0.597, Best Acc: 0.632
+Audio Acc: 0.355， Visual Acc: 0.294
+Epoch: 47:
+Start training ...
+Loss: 0.046, Acc: 0.610, Best Acc: 0.632
+Audio Acc: 0.343， Visual Acc: 0.247
+Epoch: 48:
+Start training ...
+Loss: 0.050, Acc: 0.605, Best Acc: 0.632
+Audio Acc: 0.324， Visual Acc: 0.238
+Epoch: 49:
+Start training ...
+Loss: 0.042, Acc: 0.609, Best Acc: 0.632
+Audio Acc: 0.359， Visual Acc: 0.284
+Epoch: 50:
+Start training ...
+Loss: 0.044, Acc: 0.610, Best Acc: 0.632
+Audio Acc: 0.352， Visual Acc: 0.258
+Epoch: 51:
+Start training ...
+Loss: 0.675, Acc: 0.286, Best Acc: 0.632
+Audio Acc: 0.141， Visual Acc: 0.206
+Epoch: 52:
+Start training ...
+Loss: 1.013, Acc: 0.489, Best Acc: 0.632
+Audio Acc: 0.151， Visual Acc: 0.263
+Epoch: 53:
+Start training ...
+Loss: 0.821, Acc: 0.478, Best Acc: 0.632
+Audio Acc: 0.152， Visual Acc: 0.269
+Epoch: 54:
+Start training ...
+Loss: 0.698, Acc: 0.573, Best Acc: 0.632
+Audio Acc: 0.233， Visual Acc: 0.281
+Epoch: 55:
+Start training ...
+Loss: 0.598, Acc: 0.473, Best Acc: 0.632
+Audio Acc: 0.224， Visual Acc: 0.263
+Epoch: 56:
+Start training ...
+Loss: 0.499, Acc: 0.414, Best Acc: 0.632
+Audio Acc: 0.395， Visual Acc: 0.258
+Epoch: 57:
+Start training ...
+Loss: 0.398, Acc: 0.359, Best Acc: 0.632
+Audio Acc: 0.265， Visual Acc: 0.249
+Epoch: 58:
+Start training ...
+Loss: 0.317, Acc: 0.527, Best Acc: 0.632
+Audio Acc: 0.274， Visual Acc: 0.306
+Epoch: 59:
+Start training ...
+Loss: 0.241, Acc: 0.496, Best Acc: 0.632
+Audio Acc: 0.355， Visual Acc: 0.245
+Epoch: 60:
+Start training ...
+Loss: 0.196, Acc: 0.563, Best Acc: 0.632
+Audio Acc: 0.218， Visual Acc: 0.285
+Epoch: 61:
+Start training ...
+Loss: 0.147, Acc: 0.552, Best Acc: 0.632
+Audio Acc: 0.399， Visual Acc: 0.251
+Epoch: 62:
+Start training ...
+Loss: 0.121, Acc: 0.356, Best Acc: 0.632
+Audio Acc: 0.309， Visual Acc: 0.280
+Epoch: 63:
+Start training ...
+Loss: 0.084, Acc: 0.522, Best Acc: 0.632
+Audio Acc: 0.356， Visual Acc: 0.265
+Epoch: 64:
+Start training ...
+Loss: 0.076, Acc: 0.624, Best Acc: 0.632
+Audio Acc: 0.390， Visual Acc: 0.272
+Epoch: 65:
+Start training ...
+Loss: 0.062, Acc: 0.520, Best Acc: 0.632
+Audio Acc: 0.363， Visual Acc: 0.294
+Epoch: 66:
+Start training ...
+Loss: 0.047, Acc: 0.620, Best Acc: 0.632
+Audio Acc: 0.382， Visual Acc: 0.310
+Epoch: 67:
+Start training ...
+Loss: 0.042, Acc: 0.609, Best Acc: 0.632
+Audio Acc: 0.426， Visual Acc: 0.284
+Epoch: 68:
+Start training ...
+The best model has been saved at /workspace/emotion_KD250628/MKD/CREMA_D_MKD/MKD/ckpt/best_model_of_dataset_CREMAD_OGM_concat_alpha_0.5_optimizer_sgd_modulate_starts_0_ends_50_epoch_68_acc_0.635752688172043_20250831010209.pth.
+Loss: 0.033, Acc: 0.636
+Audio Acc: 0.371， Visual Acc: 0.297
+Epoch: 69:
+Start training ...
+Loss: 0.030, Acc: 0.616, Best Acc: 0.636
+Audio Acc: 0.411， Visual Acc: 0.306
+Epoch: 70:
+Start training ...
+The best model has been saved at /workspace/emotion_KD250628/MKD/CREMA_D_MKD/MKD/ckpt/best_model_of_dataset_CREMAD_OGM_concat_alpha_0.5_optimizer_sgd_modulate_starts_0_ends_50_epoch_70_acc_0.646505376344086_20250831010209.pth.
+Loss: 0.019, Acc: 0.647
+Audio Acc: 0.394， Visual Acc: 0.293
+Epoch: 71:
+Start training ...
+The best model has been saved at /workspace/emotion_KD250628/MKD/CREMA_D_MKD/MKD/ckpt/best_model_of_dataset_CREMAD_OGM_concat_alpha_0.5_optimizer_sgd_modulate_starts_0_ends_50_epoch_71_acc_0.6599462365591398_20250831010209.pth.
+Loss: 0.016, Acc: 0.660
+Audio Acc: 0.413， Visual Acc: 0.302
+Epoch: 72:
+Start training ...
+The best model has been saved at /workspace/emotion_KD250628/MKD/CREMA_D_MKD/MKD/ckpt/best_model_of_dataset_CREMAD_OGM_concat_alpha_0.5_optimizer_sgd_modulate_starts_0_ends_50_epoch_72_acc_0.6612903225806451_20250831010209.pth.
+Loss: 0.012, Acc: 0.661
+Audio Acc: 0.418， Visual Acc: 0.300
+Epoch: 73:
+Start training ...
+Loss: 0.012, Acc: 0.661, Best Acc: 0.661
+Audio Acc: 0.413， Visual Acc: 0.308
+Epoch: 74:
+Start training ...
+The best model has been saved at /workspace/emotion_KD250628/MKD/CREMA_D_MKD/MKD/ckpt/best_model_of_dataset_CREMAD_OGM_concat_alpha_0.5_optimizer_sgd_modulate_starts_0_ends_50_epoch_74_acc_0.6653225806451613_20250831010209.pth.
+Loss: 0.014, Acc: 0.665
+Audio Acc: 0.417， Visual Acc: 0.301
+Epoch: 75:
+Start training ...
+Loss: 0.011, Acc: 0.653, Best Acc: 0.665
+Audio Acc: 0.419， Visual Acc: 0.304
+Epoch: 76:
+Start training ...
+Loss: 0.012, Acc: 0.652, Best Acc: 0.665
+Audio Acc: 0.401， Visual Acc: 0.308
+Epoch: 77:
+Start training ...
+Loss: 0.011, Acc: 0.655, Best Acc: 0.665
+Audio Acc: 0.409， Visual Acc: 0.309
+Epoch: 78:
+Start training ...
+Loss: 0.012, Acc: 0.660, Best Acc: 0.665
+Audio Acc: 0.418， Visual Acc: 0.309
+Epoch: 79:
+Start training ...
+Loss: 0.008, Acc: 0.663, Best Acc: 0.665
+Audio Acc: 0.414， Visual Acc: 0.302
+Epoch: 80:
+Start training ...
+Loss: 0.009, Acc: 0.661, Best Acc: 0.665
+Audio Acc: 0.423， Visual Acc: 0.312
+Epoch: 81:
+Start training ...
+Loss: 0.009, Acc: 0.660, Best Acc: 0.665
+Audio Acc: 0.417， Visual Acc: 0.308
+Epoch: 82:
+Start training ...
+Loss: 0.009, Acc: 0.660, Best Acc: 0.665
+Audio Acc: 0.406， Visual Acc: 0.313
+Epoch: 83:
+Start training ...
+Loss: 0.009, Acc: 0.655, Best Acc: 0.665
+Audio Acc: 0.402， Visual Acc: 0.313
+Epoch: 84:
+Start training ...
+Loss: 0.009, Acc: 0.663, Best Acc: 0.665
+Audio Acc: 0.405， Visual Acc: 0.312
+Epoch: 85:
+Start training ...
+Loss: 0.009, Acc: 0.659, Best Acc: 0.665
+Audio Acc: 0.410， Visual Acc: 0.312
+Epoch: 86:
+Start training ...
+Loss: 0.008, Acc: 0.657, Best Acc: 0.665
+Audio Acc: 0.422， Visual Acc: 0.313
+Epoch: 87:
+Start training ...
+Loss: 0.008, Acc: 0.660, Best Acc: 0.665
+Audio Acc: 0.419， Visual Acc: 0.316
+Epoch: 88:
+Start training ...
+The best model has been saved at /workspace/emotion_KD250628/MKD/CREMA_D_MKD/MKD/ckpt/best_model_of_dataset_CREMAD_OGM_concat_alpha_0.5_optimizer_sgd_modulate_starts_0_ends_50_epoch_88_acc_0.668010752688172_20250831010209.pth.
+Loss: 0.010, Acc: 0.668
+Audio Acc: 0.417， Visual Acc: 0.317
+Epoch: 89:
+Start training ...
+Loss: 0.007, Acc: 0.659, Best Acc: 0.668
+Audio Acc: 0.398， Visual Acc: 0.313
+Epoch: 90:
+Start training ...
+Loss: 0.007, Acc: 0.655, Best Acc: 0.668
+Audio Acc: 0.392， Visual Acc: 0.308
+Epoch: 91:
+Start training ...
+Loss: 0.007, Acc: 0.652, Best Acc: 0.668
+Audio Acc: 0.409， Visual Acc: 0.321
+Epoch: 92:
+Start training ...
+Loss: 0.006, Acc: 0.657, Best Acc: 0.668
+Audio Acc: 0.421， Visual Acc: 0.315
+Epoch: 93:
+Start training ...
+Loss: 0.008, Acc: 0.660, Best Acc: 0.668
+Audio Acc: 0.407， Visual Acc: 0.309
+Epoch: 94:
+Start training ...
+Loss: 0.008, Acc: 0.659, Best Acc: 0.668
+Audio Acc: 0.419， Visual Acc: 0.312
+Epoch: 95:
+Start training ...
+Loss: 0.007, Acc: 0.655, Best Acc: 0.668
+Audio Acc: 0.407， Visual Acc: 0.308
+Epoch: 96:
+Start training ...
+Loss: 0.008, Acc: 0.656, Best Acc: 0.668
+Audio Acc: 0.410， Visual Acc: 0.310
+Epoch: 97:
+Start training ...
+Loss: 0.007, Acc: 0.653, Best Acc: 0.668
+Audio Acc: 0.426， Visual Acc: 0.315
+Epoch: 98:
+Start training ...
+Loss: 0.008, Acc: 0.664, Best Acc: 0.668
+Audio Acc: 0.421， Visual Acc: 0.300
+Epoch: 99:
+Start training ...
+Loss: 0.006, Acc: 0.653, Best Acc: 0.668
+Audio Acc: 0.422， Visual Acc: 0.317
+Epoch: 100:
+Start training ...
+Loss: 0.007, Acc: 0.651, Best Acc: 0.668
+Audio Acc: 0.417， Visual Acc: 0.316
+Epoch: 101:
+Start training ...
+Loss: 0.006, Acc: 0.661, Best Acc: 0.668
+Audio Acc: 0.423， Visual Acc: 0.312
+Epoch: 102:
+Start training ...
+Loss: 0.007, Acc: 0.655, Best Acc: 0.668
+Audio Acc: 0.402， Visual Acc: 0.315
+Epoch: 103:
+Start training ...
+Loss: 0.007, Acc: 0.661, Best Acc: 0.668
+Audio Acc: 0.425， Visual Acc: 0.304
+Epoch: 104:
+Start training ...
+Loss: 0.006, Acc: 0.660, Best Acc: 0.668
+Audio Acc: 0.418， Visual Acc: 0.312
+Epoch: 105:
+Start training ...
+Loss: 0.005, Acc: 0.653, Best Acc: 0.668
+Audio Acc: 0.425， Visual Acc: 0.310
+Epoch: 106:
+Start training ...
+Loss: 0.007, Acc: 0.660, Best Acc: 0.668
+Audio Acc: 0.417， Visual Acc: 0.320
+Epoch: 107:
+Start training ...
+Loss: 0.006, Acc: 0.653, Best Acc: 0.668
+Audio Acc: 0.422， Visual Acc: 0.317
+Epoch: 108:
+Start training ...
+Loss: 0.005, Acc: 0.649, Best Acc: 0.668
+Audio Acc: 0.418， Visual Acc: 0.308
+Epoch: 109:
+Start training ...
+Loss: 0.005, Acc: 0.657, Best Acc: 0.668
+Audio Acc: 0.417， Visual Acc: 0.317
+Epoch: 110:
+Start training ...
+Loss: 0.007, Acc: 0.659, Best Acc: 0.668
+Audio Acc: 0.414， Visual Acc: 0.317
+Epoch: 111:
+Start training ...
+Loss: 0.006, Acc: 0.653, Best Acc: 0.668
+Audio Acc: 0.422， Visual Acc: 0.313
+Epoch: 112:
+Start training ...
+Loss: 0.005, Acc: 0.659, Best Acc: 0.668
+Audio Acc: 0.411， Visual Acc: 0.316
+Epoch: 113:
+Start training ...
+Loss: 0.006, Acc: 0.655, Best Acc: 0.668
+Audio Acc: 0.426， Visual Acc: 0.316
+Epoch: 114:
+Start training ...
+Loss: 0.006, Acc: 0.657, Best Acc: 0.668
+Audio Acc: 0.409， Visual Acc: 0.302
+Epoch: 115:
+Start training ...
+Loss: 0.005, Acc: 0.659, Best Acc: 0.668
+Audio Acc: 0.426， Visual Acc: 0.315
+Epoch: 116:
+Start training ...
+Loss: 0.005, Acc: 0.659, Best Acc: 0.668
+Audio Acc: 0.414， Visual Acc: 0.317
+Epoch: 117:
+Start training ...
+Loss: 0.006, Acc: 0.659, Best Acc: 0.668
+Audio Acc: 0.426， Visual Acc: 0.319
+Epoch: 118:
+Start training ...
+Loss: 0.005, Acc: 0.657, Best Acc: 0.668
+Audio Acc: 0.413， Visual Acc: 0.315
+Epoch: 119:
+Start training ...
+Loss: 0.006, Acc: 0.660, Best Acc: 0.668
+Audio Acc: 0.435， Visual Acc: 0.315
+Epoch: 120:
+Start training ...
+Loss: 0.006, Acc: 0.653, Best Acc: 0.668
+Audio Acc: 0.421， Visual Acc: 0.316
+Epoch: 121:
+Start training ...
+Loss: 0.006, Acc: 0.657, Best Acc: 0.668
+Audio Acc: 0.441， Visual Acc: 0.309
+Epoch: 122:
+Start training ...
+Loss: 0.005, Acc: 0.663, Best Acc: 0.668
+Audio Acc: 0.422， Visual Acc: 0.306
+Epoch: 123:
+Start training ...
+Loss: 0.005, Acc: 0.663, Best Acc: 0.668
+Audio Acc: 0.431， Visual Acc: 0.310
+Epoch: 124:
+Start training ...
+Loss: 0.005, Acc: 0.661, Best Acc: 0.668
+Audio Acc: 0.427， Visual Acc: 0.310
+Epoch: 125:
+Start training ...
+Loss: 0.005, Acc: 0.657, Best Acc: 0.668
+Audio Acc: 0.426， Visual Acc: 0.313
+Epoch: 126:
+Start training ...
+Loss: 0.005, Acc: 0.659, Best Acc: 0.668
+Audio Acc: 0.422， Visual Acc: 0.312
+Epoch: 127:
+Start training ...
+Loss: 0.005, Acc: 0.661, Best Acc: 0.668
+Audio Acc: 0.417， Visual Acc: 0.321
+Epoch: 128:
+Start training ...
+Loss: 0.005, Acc: 0.652, Best Acc: 0.668
+Audio Acc: 0.426， Visual Acc: 0.315
+Epoch: 129:
+Start training ...
+Loss: 0.005, Acc: 0.647, Best Acc: 0.668
+Audio Acc: 0.415， Visual Acc: 0.312
+Epoch: 130:
+Start training ...
+Loss: 0.005, Acc: 0.656, Best Acc: 0.668
+Audio Acc: 0.410， Visual Acc: 0.313
+Epoch: 131:
+Start training ...
+Loss: 0.005, Acc: 0.653, Best Acc: 0.668
+Audio Acc: 0.406， Visual Acc: 0.316
+Epoch: 132:
+Start training ...
+Loss: 0.005, Acc: 0.656, Best Acc: 0.668
+Audio Acc: 0.429， Visual Acc: 0.310
+Epoch: 133:
+Start training ...
+Loss: 0.004, Acc: 0.647, Best Acc: 0.668
+Audio Acc: 0.422， Visual Acc: 0.300
+Epoch: 134:
+Start training ...
+Loss: 0.005, Acc: 0.663, Best Acc: 0.668
+Audio Acc: 0.421， Visual Acc: 0.313
+Epoch: 135:
+Start training ...
+Loss: 0.004, Acc: 0.659, Best Acc: 0.668
+Audio Acc: 0.419， Visual Acc: 0.293
+Epoch: 136:
+Start training ...
+Loss: 0.005, Acc: 0.661, Best Acc: 0.668
+Audio Acc: 0.423， Visual Acc: 0.306
+Epoch: 137:
+Start training ...
+Loss: 0.005, Acc: 0.653, Best Acc: 0.668
+Audio Acc: 0.407， Visual Acc: 0.316
+Epoch: 138:
+Start training ...
+Loss: 0.004, Acc: 0.653, Best Acc: 0.668
+Audio Acc: 0.414， Visual Acc: 0.316
+Epoch: 139:
+Start training ...
+Loss: 0.004, Acc: 0.653, Best Acc: 0.668
+Audio Acc: 0.419， Visual Acc: 0.304
+Epoch: 140:
+Start training ...
+Loss: 0.004, Acc: 0.651, Best Acc: 0.668
+Audio Acc: 0.422， Visual Acc: 0.304
+Epoch: 141:
+Start training ...
+Loss: 0.004, Acc: 0.660, Best Acc: 0.668
+Audio Acc: 0.429， Visual Acc: 0.310
+Epoch: 142:
+Start training ...
+Loss: 0.006, Acc: 0.652, Best Acc: 0.668
+Audio Acc: 0.421， Visual Acc: 0.305
+Epoch: 143:
+Start training ...
+Loss: 0.005, Acc: 0.657, Best Acc: 0.668
+Audio Acc: 0.421， Visual Acc: 0.313
+Epoch: 144:
+Start training ...
+Loss: 0.005, Acc: 0.659, Best Acc: 0.668
+Audio Acc: 0.437， Visual Acc: 0.312
+Epoch: 145:
+Start training ...
+Loss: 0.005, Acc: 0.656, Best Acc: 0.668
+Audio Acc: 0.425， Visual Acc: 0.301
+Epoch: 146:
+Start training ...
+Loss: 0.004, Acc: 0.653, Best Acc: 0.668
+Audio Acc: 0.426， Visual Acc: 0.315
+Epoch: 147:
+Start training ...
+Loss: 0.004, Acc: 0.657, Best Acc: 0.668
+Audio Acc: 0.435， Visual Acc: 0.308
+Epoch: 148:
+Start training ...
+Loss: 0.004, Acc: 0.651, Best Acc: 0.668
+Audio Acc: 0.422， Visual Acc: 0.310
+Epoch: 149:
+Start training ...
+Loss: 0.005, Acc: 0.655, Best Acc: 0.668
+Audio Acc: 0.426， Visual Acc: 0.306
+Epoch: 150:
+Start training ...
+Loss: 0.005, Acc: 0.661, Best Acc: 0.668
+Audio Acc: 0.423， Visual Acc: 0.308
+Epoch: 151:
+Start training ...
+Loss: 0.005, Acc: 0.665, Best Acc: 0.668
+Audio Acc: 0.437， Visual Acc: 0.305
+Epoch: 152:
+Start training ...
+Loss: 0.004, Acc: 0.649, Best Acc: 0.668
+Audio Acc: 0.418， Visual Acc: 0.317
+Epoch: 153:
+Start training ...
+Loss: 0.004, Acc: 0.653, Best Acc: 0.668
+Audio Acc: 0.422， Visual Acc: 0.305
+Epoch: 154:
+Start training ...
+Loss: 0.005, Acc: 0.655, Best Acc: 0.668
+Audio Acc: 0.438， Visual Acc: 0.310
+Epoch: 155:
+Start training ...
+Loss: 0.004, Acc: 0.665, Best Acc: 0.668
+Audio Acc: 0.423， Visual Acc: 0.319
+Epoch: 156:
+Start training ...
+Loss: 0.003, Acc: 0.661, Best Acc: 0.668
+Audio Acc: 0.425， Visual Acc: 0.312
+Epoch: 157:
+Start training ...
+Loss: 0.004, Acc: 0.659, Best Acc: 0.668
+Audio Acc: 0.430， Visual Acc: 0.308
+Epoch: 158:
+Start training ...
+Loss: 0.005, Acc: 0.653, Best Acc: 0.668
+Audio Acc: 0.421， Visual Acc: 0.317
+Epoch: 159:
+Start training ...
+Loss: 0.005, Acc: 0.657, Best Acc: 0.668
+Audio Acc: 0.421， Visual Acc: 0.304
+Epoch: 160:
+Start training ...
+Loss: 0.005, Acc: 0.661, Best Acc: 0.668
+Audio Acc: 0.440， Visual Acc: 0.308
+Epoch: 161:
+Start training ...
+Loss: 0.004, Acc: 0.652, Best Acc: 0.668
+Audio Acc: 0.429， Visual Acc: 0.301
+Epoch: 162:
+Start training ...
+Loss: 0.004, Acc: 0.657, Best Acc: 0.668
+Audio Acc: 0.426， Visual Acc: 0.306
+Epoch: 163:
+Start training ...
+Loss: 0.005, Acc: 0.660, Best Acc: 0.668
+Audio Acc: 0.431， Visual Acc: 0.312
+Epoch: 164:
+Start training ...
+Loss: 0.005, Acc: 0.656, Best Acc: 0.668
+Audio Acc: 0.421， Visual Acc: 0.308
+Epoch: 165:
+Start training ...
+Loss: 0.005, Acc: 0.661, Best Acc: 0.668
+Audio Acc: 0.430， Visual Acc: 0.316
+Epoch: 166:
+Start training ...
+The best model has been saved at /workspace/emotion_KD250628/MKD/CREMA_D_MKD/MKD/ckpt/best_model_of_dataset_CREMAD_OGM_concat_alpha_0.5_optimizer_sgd_modulate_starts_0_ends_50_epoch_166_acc_0.6693548387096774_20250831010209.pth.
+Loss: 0.005, Acc: 0.669
+Audio Acc: 0.442， Visual Acc: 0.315
+Epoch: 167:
+Start training ...
+Loss: 0.005, Acc: 0.661, Best Acc: 0.669
+Audio Acc: 0.431， Visual Acc: 0.312
+Epoch: 168:
+Start training ...
+Loss: 0.004, Acc: 0.651, Best Acc: 0.669
+Audio Acc: 0.418， Visual Acc: 0.308
+Epoch: 169:
+Start training ...
+Loss: 0.004, Acc: 0.649, Best Acc: 0.669
+Audio Acc: 0.433， Visual Acc: 0.310
+Epoch: 170:
+Start training ...
+Loss: 0.004, Acc: 0.656, Best Acc: 0.669
+Audio Acc: 0.426， Visual Acc: 0.309
+Epoch: 171:
+Start training ...
+Loss: 0.005, Acc: 0.657, Best Acc: 0.669
+Audio Acc: 0.427， Visual Acc: 0.312
+Epoch: 172:
+Start training ...
+Loss: 0.004, Acc: 0.659, Best Acc: 0.669
+Audio Acc: 0.430， Visual Acc: 0.316
+Epoch: 173:
+Start training ...
+Loss: 0.004, Acc: 0.657, Best Acc: 0.669
+Audio Acc: 0.434， Visual Acc: 0.310
+Epoch: 174:
+Start training ...
+Loss: 0.004, Acc: 0.668, Best Acc: 0.669
+Audio Acc: 0.421， Visual Acc: 0.309
+Epoch: 175:
+Start training ...
+Loss: 0.004, Acc: 0.660, Best Acc: 0.669
+Audio Acc: 0.430， Visual Acc: 0.313
+Epoch: 176:
+Start training ...
+Loss: 0.004, Acc: 0.655, Best Acc: 0.669
+Audio Acc: 0.419， Visual Acc: 0.313
+Epoch: 177:
+Start training ...
+Loss: 0.004, Acc: 0.655, Best Acc: 0.669
+Audio Acc: 0.425， Visual Acc: 0.316
+Epoch: 178:
+Start training ...
+Loss: 0.005, Acc: 0.665, Best Acc: 0.669
+Audio Acc: 0.430， Visual Acc: 0.308
+Epoch: 179:
+Start training ...
+Loss: 0.004, Acc: 0.657, Best Acc: 0.669
+Audio Acc: 0.417， Visual Acc: 0.309
+Epoch: 180:
+Start training ...
+Loss: 0.004, Acc: 0.664, Best Acc: 0.669
+Audio Acc: 0.429， Visual Acc: 0.320
+Epoch: 181:
+Start training ...
+Loss: 0.004, Acc: 0.665, Best Acc: 0.669
+Audio Acc: 0.431， Visual Acc: 0.301
+Epoch: 182:
+Start training ...
+Loss: 0.004, Acc: 0.656, Best Acc: 0.669
+Audio Acc: 0.417， Visual Acc: 0.312
+Epoch: 183:
+Start training ...
+Loss: 0.004, Acc: 0.656, Best Acc: 0.669
+Audio Acc: 0.426， Visual Acc: 0.297
+Epoch: 184:
+Start training ...
+Loss: 0.005, Acc: 0.661, Best Acc: 0.669
+Audio Acc: 0.427， Visual Acc: 0.320
+Epoch: 185:
+Start training ...
+Loss: 0.004, Acc: 0.665, Best Acc: 0.669
+Audio Acc: 0.421， Visual Acc: 0.312
+Epoch: 186:
+Start training ...
+Loss: 0.004, Acc: 0.663, Best Acc: 0.669
+Audio Acc: 0.434， Visual Acc: 0.306
+Epoch: 187:
+Start training ...
+Loss: 0.004, Acc: 0.660, Best Acc: 0.669
+Audio Acc: 0.427， Visual Acc: 0.309
+Epoch: 188:
+Start training ...
+Loss: 0.004, Acc: 0.655, Best Acc: 0.669
+Audio Acc: 0.426， Visual Acc: 0.319
+Epoch: 189:
+Start training ...
+Loss: 0.004, Acc: 0.652, Best Acc: 0.669
+Audio Acc: 0.430， Visual Acc: 0.310
+Epoch: 190:
+Start training ...
+Loss: 0.004, Acc: 0.653, Best Acc: 0.669
+Audio Acc: 0.417， Visual Acc: 0.315
+Epoch: 191:
+Start training ...
+Loss: 0.006, Acc: 0.656, Best Acc: 0.669
+Audio Acc: 0.415， Visual Acc: 0.309
+Epoch: 192:
+Start training ...
+Loss: 0.005, Acc: 0.660, Best Acc: 0.669
+Audio Acc: 0.430， Visual Acc: 0.315
+Epoch: 193:
+Start training ...
+Loss: 0.004, Acc: 0.665, Best Acc: 0.669
+Audio Acc: 0.434， Visual Acc: 0.302
+Epoch: 194:
+Start training ...
+Loss: 0.005, Acc: 0.652, Best Acc: 0.669
+Audio Acc: 0.419， Visual Acc: 0.301
+Epoch: 195:
+Start training ...
+Loss: 0.004, Acc: 0.659, Best Acc: 0.669
+Audio Acc: 0.418， Visual Acc: 0.306
+Epoch: 196:
+Start training ...
+Loss: 0.004, Acc: 0.649, Best Acc: 0.669
+Audio Acc: 0.437， Visual Acc: 0.323
+Epoch: 197:
+Start training ...
+Loss: 0.005, Acc: 0.665, Best Acc: 0.669
+Audio Acc: 0.427， Visual Acc: 0.315
+Epoch: 198:
+Start training ...
+Loss: 0.004, Acc: 0.652, Best Acc: 0.669
+Audio Acc: 0.431， Visual Acc: 0.313
+Epoch: 199:
+Start training ...
+Loss: 0.005, Acc: 0.665, Best Acc: 0.669
+Audio Acc: 0.431， Visual Acc: 0.302

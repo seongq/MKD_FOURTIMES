@@ -1,0 +1,10 @@
+{"time":"2025-08-29T16:04:51.505577455+09:00","level":"INFO","msg":"stream: starting","core version":"0.19.8","symlink path":"/workspace/emotion_KD250628/MKD/CREMA_D_MKD/MKD/wandb/run-20250829_160451-6vfv1tbv/logs/debug-core.log"}
+{"time":"2025-08-29T16:04:51.614578149+09:00","level":"INFO","msg":"created new stream","id":"6vfv1tbv"}
+{"time":"2025-08-29T16:04:51.614637329+09:00","level":"INFO","msg":"stream: started","id":"6vfv1tbv"}
+{"time":"2025-08-29T16:04:51.614703249+09:00","level":"INFO","msg":"writer: Do: started","stream_id":"6vfv1tbv"}
+{"time":"2025-08-29T16:04:51.614759004+09:00","level":"INFO","msg":"handler: started","stream_id":"6vfv1tbv"}
+{"time":"2025-08-29T16:04:51.614875264+09:00","level":"INFO","msg":"sender: started","stream_id":"6vfv1tbv"}
+{"time":"2025-08-29T16:04:52.025210281+09:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2025-08-29T16:05:12.262482645+09:00","level":"INFO","msg":"stream: closing","id":"6vfv1tbv"}
+{"time":"2025-08-29T16:05:12.262559594+09:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2025-08-29T16:05:12.263418312+09:00","level":"INFO","msg":"Stopped system monitor"}

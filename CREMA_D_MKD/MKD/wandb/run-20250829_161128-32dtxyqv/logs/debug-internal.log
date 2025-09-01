@@ -1,0 +1,10 @@
+{"time":"2025-08-29T16:11:28.363612024+09:00","level":"INFO","msg":"stream: starting","core version":"0.19.8","symlink path":"/workspace/emotion_KD250628/MKD/CREMA_D_MKD/MKD/wandb/run-20250829_161128-32dtxyqv/logs/debug-core.log"}
+{"time":"2025-08-29T16:11:28.473222038+09:00","level":"INFO","msg":"created new stream","id":"32dtxyqv"}
+{"time":"2025-08-29T16:11:28.473276497+09:00","level":"INFO","msg":"stream: started","id":"32dtxyqv"}
+{"time":"2025-08-29T16:11:28.473343679+09:00","level":"INFO","msg":"writer: Do: started","stream_id":"32dtxyqv"}
+{"time":"2025-08-29T16:11:28.473397203+09:00","level":"INFO","msg":"sender: started","stream_id":"32dtxyqv"}
+{"time":"2025-08-29T16:11:28.473470792+09:00","level":"INFO","msg":"handler: started","stream_id":"32dtxyqv"}
+{"time":"2025-08-29T16:11:28.831690666+09:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2025-08-29T16:11:50.075750792+09:00","level":"INFO","msg":"stream: closing","id":"32dtxyqv"}
+{"time":"2025-08-29T16:11:50.075799001+09:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2025-08-29T16:11:50.076651611+09:00","level":"INFO","msg":"Stopped system monitor"}

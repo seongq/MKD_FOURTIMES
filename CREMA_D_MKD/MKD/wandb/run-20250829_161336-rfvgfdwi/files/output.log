@@ -1,0 +1,97 @@
+Training unimodal model using visual modality
+visual
+Epoch: 0:
+Start training ...
+The best model has been saved at /workspace/emotion_KD250628/MKD/CREMA_D_MKD/MKD/ckpt/best_model_of_dataset_CREMAD_unimodal_visual_optimizer_sgd_epoch_0_acc_0.2_20250829161335.pth.
+Loss: 2.349, Acc: 0.200
+Epoch: 1:
+Start training ...
+Loss: 2.229, Acc: 0.200, Best Acc: 0.200
+Epoch: 2:
+Start training ...
+Loss: 1.899, Acc: 0.200, Best Acc: 0.200
+Epoch: 3:
+Start training ...
+Loss: 2.019, Acc: 0.100, Best Acc: 0.200
+Epoch: 4:
+Start training ...
+The best model has been saved at /workspace/emotion_KD250628/MKD/CREMA_D_MKD/MKD/ckpt/best_model_of_dataset_CREMAD_unimodal_visual_optimizer_sgd_epoch_4_acc_0.3_20250829161335.pth.
+Loss: 1.851, Acc: 0.300
+Epoch: 5:
+Start training ...
+Loss: 1.679, Acc: 0.300, Best Acc: 0.300
+Epoch: 6:
+Start training ...
+Loss: 1.644, Acc: 0.300, Best Acc: 0.300
+Epoch: 7:
+Start training ...
+Loss: 1.739, Acc: 0.200, Best Acc: 0.300
+Epoch: 8:
+Start training ...
+Loss: 1.528, Acc: 0.200, Best Acc: 0.300
+Epoch: 9:
+Start training ...
+Loss: 1.517, Acc: 0.200, Best Acc: 0.300
+Epoch: 10:
+Start training ...
+Loss: 1.519, Acc: 0.200, Best Acc: 0.300
+Epoch: 11:
+Start training ...
+Loss: 1.518, Acc: 0.200, Best Acc: 0.300
+Epoch: 12:
+Start training ...
+Loss: 1.432, Acc: 0.200, Best Acc: 0.300
+Epoch: 13:
+Start training ...
+Loss: 1.603, Acc: 0.200, Best Acc: 0.300
+Epoch: 14:
+Start training ...
+Loss: 1.542, Acc: 0.200, Best Acc: 0.300
+Epoch: 15:
+Start training ...
+Loss: 1.827, Acc: 0.300, Best Acc: 0.300
+Epoch: 16:
+Start training ...
+Loss: 1.466, Acc: 0.300, Best Acc: 0.300
+Epoch: 17:
+Start training ...
+Loss: 1.794, Acc: 0.300, Best Acc: 0.300
+Epoch: 18:
+Start training ...
+The best model has been saved at /workspace/emotion_KD250628/MKD/CREMA_D_MKD/MKD/ckpt/best_model_of_dataset_CREMAD_unimodal_visual_optimizer_sgd_epoch_18_acc_0.4_20250829161335.pth.
+Loss: 1.786, Acc: 0.400
+Epoch: 19:
+Start training ...
+Loss: 1.475, Acc: 0.200, Best Acc: 0.400
+Epoch: 20:
+Start training ...
+Loss: 1.334, Acc: 0.200, Best Acc: 0.400
+Epoch: 21:
+Start training ...
+Loss: 1.579, Acc: 0.300, Best Acc: 0.400
+Epoch: 22:
+Start training ...
+Loss: 1.359, Acc: 0.200, Best Acc: 0.400
+Epoch: 23:
+Start training ...
+Traceback (most recent call last):
+  File "/workspace/emotion_KD250628/MKD/CREMA_D_MKD/MKD/main.py", line 506, in <module>
+    main()
+  File "/workspace/emotion_KD250628/MKD/CREMA_D_MKD/MKD/main.py", line 405, in main
+    acc = valid(args, model, device, test_dataloader)
+  File "/workspace/emotion_KD250628/MKD/CREMA_D_MKD/MKD/main.py", line 236, in valid
+    label = label.to(device)
+KeyboardInterrupt
+Exception ignored in atexit callback: <function _start_and_connect_service.<locals>.teardown_atexit at 0x7f59ab395c60>
+Traceback (most recent call last):
+  File "/opt/conda/lib/python3.10/site-packages/wandb/sdk/lib/service_connection.py", line 94, in teardown_atexit
+    conn.teardown(hooks.exit_code)
+  File "/opt/conda/lib/python3.10/site-packages/wandb/sdk/lib/service_connection.py", line 226, in teardown
+    self._router.join()
+  File "/opt/conda/lib/python3.10/site-packages/wandb/sdk/interface/router.py", line 75, in join
+    self._thread.join()
+  File "/opt/conda/lib/python3.10/threading.py", line 1096, in join
+    self._wait_for_tstate_lock()
+  File "/opt/conda/lib/python3.10/threading.py", line 1116, in _wait_for_tstate_lock
+    if lock.acquire(block, timeout):
+KeyboardInterrupt:

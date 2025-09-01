@@ -1,0 +1,22 @@
+2025-08-29 16:02:22,240 INFO    MainThread:2240587 [wandb_setup.py:_flush():67] Current SDK version is 0.19.8
+2025-08-29 16:02:22,240 INFO    MainThread:2240587 [wandb_setup.py:_flush():67] Configure stats pid to 2240587
+2025-08-29 16:02:22,240 INFO    MainThread:2240587 [wandb_setup.py:_flush():67] Loading settings from /root/.config/wandb/settings
+2025-08-29 16:02:22,240 INFO    MainThread:2240587 [wandb_setup.py:_flush():67] Loading settings from /workspace/emotion_KD250628/MKD/CREMA_D_MKD/MKD/wandb/settings
+2025-08-29 16:02:22,240 INFO    MainThread:2240587 [wandb_setup.py:_flush():67] Loading settings from environment variables
+2025-08-29 16:02:22,240 INFO    MainThread:2240587 [wandb_init.py:setup_run_log_directory():647] Logging user logs to /workspace/emotion_KD250628/MKD/CREMA_D_MKD/MKD/wandb/run-20250829_160222-7o7lxeg1/logs/debug.log
+2025-08-29 16:02:22,240 INFO    MainThread:2240587 [wandb_init.py:setup_run_log_directory():648] Logging internal logs to /workspace/emotion_KD250628/MKD/CREMA_D_MKD/MKD/wandb/run-20250829_160222-7o7lxeg1/logs/debug-internal.log
+2025-08-29 16:02:22,240 INFO    MainThread:2240587 [wandb_init.py:init():761] calling init triggers
+2025-08-29 16:02:22,240 INFO    MainThread:2240587 [wandb_init.py:init():766] wandb.init called with sweep_config: {}
+config: {'dataset': 'CREMAD', 'modulation': 'OGM_GE', 'fusion_method': 'sum', 'fps': 1, 'use_video_frames': 3, 'audio_path': '/workspace/datasets/CREMA-D/AudioWAV', 'visual_path': '/workspace/datasets/CREMA-D/', 'batch_size': 64, 'epochs': 200, 'optimizer': 'sgd', 'learning_rate': 0.001, 'lr_decay_step': 70, 'lr_decay_ratio': 0.1, 'modulation_starts': 0, 'modulation_ends': 50, 'alpha': 0.5, 'ckpt_path': '/workspace/emotion_KD250628/MKD/CREMA_D_MKD/MKD/ckpt', 'train': True, 'gpu_ids': '0, 1', 'small_dataset': True, 'unimodal': False, 'unimodal_modality': None, 'random_seed': 2401, '_wandb': {}}
+2025-08-29 16:02:22,240 INFO    MainThread:2240587 [wandb_init.py:init():784] starting backend
+2025-08-29 16:02:22,240 INFO    MainThread:2240587 [wandb_init.py:init():788] sending inform_init request
+2025-08-29 16:02:22,245 INFO    MainThread:2240587 [backend.py:_multiprocessing_setup():101] multiprocessing start_methods=fork,spawn,forkserver, using: spawn
+2025-08-29 16:02:22,245 INFO    MainThread:2240587 [wandb_init.py:init():798] backend started and connected
+2025-08-29 16:02:22,246 INFO    MainThread:2240587 [wandb_init.py:init():891] updated telemetry
+2025-08-29 16:02:22,252 INFO    MainThread:2240587 [wandb_init.py:init():915] communicating run to backend with 90.0 second timeout
+2025-08-29 16:02:22,720 INFO    MainThread:2240587 [wandb_init.py:init():990] starting run threads in backend
+2025-08-29 16:02:22,958 INFO    MainThread:2240587 [wandb_run.py:_console_start():2375] atexit reg
+2025-08-29 16:02:22,958 INFO    MainThread:2240587 [wandb_run.py:_redirect():2227] redirect: wrap_raw
+2025-08-29 16:02:22,959 INFO    MainThread:2240587 [wandb_run.py:_redirect():2292] Wrapping output streams.
+2025-08-29 16:02:22,959 INFO    MainThread:2240587 [wandb_run.py:_redirect():2315] Redirects installed.
+2025-08-29 16:02:22,961 INFO    MainThread:2240587 [wandb_init.py:init():1032] run started, returning control to user process
