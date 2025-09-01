@@ -1,0 +1,11 @@
+{"time":"2025-09-01T12:51:23.566514492+09:00","level":"INFO","msg":"stream: starting","core version":"0.19.8","symlink path":"/workspace/emotion_KD250628/MKD/CREMA_D_MKD/MKD/wandb/run-20250901_125123-qrtdn4h6/logs/debug-core.log"}
+{"time":"2025-09-01T12:51:23.677267575+09:00","level":"INFO","msg":"created new stream","id":"qrtdn4h6"}
+{"time":"2025-09-01T12:51:23.677330741+09:00","level":"INFO","msg":"stream: started","id":"qrtdn4h6"}
+{"time":"2025-09-01T12:51:23.677351798+09:00","level":"INFO","msg":"writer: Do: started","stream_id":"qrtdn4h6"}
+{"time":"2025-09-01T12:51:23.677404707+09:00","level":"INFO","msg":"handler: started","stream_id":"qrtdn4h6"}
+{"time":"2025-09-01T12:51:23.677465682+09:00","level":"INFO","msg":"sender: started","stream_id":"qrtdn4h6"}
+{"time":"2025-09-01T12:51:24.056588644+09:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2025-09-01T12:51:39.596350072+09:00","level":"INFO","msg":"stream: closing","id":"qrtdn4h6"}
+{"time":"2025-09-01T12:51:39.596419786+09:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2025-09-01T12:51:39.597069442+09:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2025-09-01T12:51:40.38138743+09:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}

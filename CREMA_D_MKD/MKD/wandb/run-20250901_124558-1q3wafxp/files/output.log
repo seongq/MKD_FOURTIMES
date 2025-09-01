@@ -1,0 +1,8 @@
+Training unimodal model using audio modality
+audio
+Traceback (most recent call last):
+  File "/workspace/emotion_KD250628/MKD/CREMA_D_MKD/MKD/main_optimizer_chuga20250901.py", line 513, in <module>
+    main()
+  File "/workspace/emotion_KD250628/MKD/CREMA_D_MKD/MKD/main_optimizer_chuga20250901.py", line 352, in main
+    optimizer = optim.Adam(model.parameters(), lr=args.learning_rate, momentum=0.9, weight_decay=1e-4)
+TypeError: Adam.__init__() got an unexpected keyword argument 'momentum'

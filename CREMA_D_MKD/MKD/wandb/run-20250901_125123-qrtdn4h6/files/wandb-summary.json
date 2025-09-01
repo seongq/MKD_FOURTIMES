@@ -1,0 +1,1 @@
+{"train/loss_a":1.9849414825439453,"train/loss":2.3559141159057617,"train/lr":0.001,"_runtime":16.033696586,"train/coeff_v":1,"_wandb":{"runtime":16},"_timestamp":1.756698698084273e+09,"train/epoch":0,"train/global_step":6,"_step":6,"train/iter_in_epoch":6,"train/loss_v":2.392374277114868,"train/coeff_a":0.45854634046554565}

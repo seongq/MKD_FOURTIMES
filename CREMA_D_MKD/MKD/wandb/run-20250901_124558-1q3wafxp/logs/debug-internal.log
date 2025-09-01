@@ -1,0 +1,15 @@
+{"time":"2025-09-01T12:45:58.608490218+09:00","level":"INFO","msg":"stream: starting","core version":"0.19.8","symlink path":"/workspace/emotion_KD250628/MKD/CREMA_D_MKD/MKD/wandb/run-20250901_124558-1q3wafxp/logs/debug-core.log"}
+{"time":"2025-09-01T12:45:58.718566071+09:00","level":"INFO","msg":"created new stream","id":"1q3wafxp"}
+{"time":"2025-09-01T12:45:58.718627909+09:00","level":"INFO","msg":"stream: started","id":"1q3wafxp"}
+{"time":"2025-09-01T12:45:58.71868672+09:00","level":"INFO","msg":"writer: Do: started","stream_id":"1q3wafxp"}
+{"time":"2025-09-01T12:45:58.718744852+09:00","level":"INFO","msg":"sender: started","stream_id":"1q3wafxp"}
+{"time":"2025-09-01T12:45:58.718799606+09:00","level":"INFO","msg":"handler: started","stream_id":"1q3wafxp"}
+{"time":"2025-09-01T12:45:59.270833729+09:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2025-09-01T12:46:00.739561899+09:00","level":"INFO","msg":"stream: closing","id":"1q3wafxp"}
+{"time":"2025-09-01T12:46:00.739617405+09:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2025-09-01T12:46:00.740351088+09:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2025-09-01T12:46:01.640150797+09:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2025-09-01T12:46:01.942681543+09:00","level":"INFO","msg":"handler: closed","stream_id":"1q3wafxp"}
+{"time":"2025-09-01T12:46:01.942753991+09:00","level":"INFO","msg":"sender: closed","stream_id":"1q3wafxp"}
+{"time":"2025-09-01T12:46:01.942740045+09:00","level":"INFO","msg":"writer: Close: closed","stream_id":"1q3wafxp"}
+{"time":"2025-09-01T12:46:01.942865104+09:00","level":"INFO","msg":"stream: closed","id":"1q3wafxp"}

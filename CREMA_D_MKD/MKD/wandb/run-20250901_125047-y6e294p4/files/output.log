@@ -1,0 +1,28 @@
+Epoch: 0:
+Start training ...
+Traceback (most recent call last):
+  File "/workspace/emotion_KD250628/MKD/CREMA_D_MKD/MKD/main_optimizer_chuga20250901.py", line 513, in <module>
+    main()
+  File "/workspace/emotion_KD250628/MKD/CREMA_D_MKD/MKD/main_optimizer_chuga20250901.py", line 415, in main
+    batch_loss, batch_loss_a, batch_loss_v, global_step = train_epoch(args, epoch, model, device,
+  File "/workspace/emotion_KD250628/MKD/CREMA_D_MKD/MKD/main_optimizer_chuga20250901.py", line 78, in train_epoch
+    for step, (spec, image, label) in enumerate(dataloader):
+  File "/opt/conda/lib/python3.10/site-packages/torch/utils/data/dataloader.py", line 630, in __next__
+    data = self._next_data()
+  File "/opt/conda/lib/python3.10/site-packages/torch/utils/data/dataloader.py", line 674, in _next_data
+    data = self._dataset_fetcher.fetch(index)  # may raise StopIteration
+  File "/opt/conda/lib/python3.10/site-packages/torch/utils/data/_utils/fetch.py", line 51, in fetch
+    data = [self.dataset[idx] for idx in possibly_batched_index]
+  File "/opt/conda/lib/python3.10/site-packages/torch/utils/data/_utils/fetch.py", line 51, in <listcomp>
+    data = [self.dataset[idx] for idx in possibly_batched_index]
+  File "/workspace/emotion_KD250628/MKD/CREMA_D_MKD/MKD/dataset/CramedDataset.py", line 62, in __getitem__
+    samples, rate = librosa.load(self.audio[idx], sr=22050)
+  File "/opt/conda/lib/python3.10/site-packages/librosa/core/audio.py", line 193, in load
+    y = resample(y, orig_sr=sr_native, target_sr=sr, res_type=res_type)
+  File "/opt/conda/lib/python3.10/site-packages/librosa/core/audio.py", line 669, in resample
+    y_hat = np.apply_along_axis(
+  File "/opt/conda/lib/python3.10/site-packages/numpy/lib/shape_base.py", line 379, in apply_along_axis
+    res = asanyarray(func1d(inarr_view[ind0], *args, **kwargs))
+  File "/opt/conda/lib/python3.10/site-packages/soxr/__init__.py", line 206, in resample
+    y = divide_proc(in_rate, out_rate, x[:, np.newaxis], q)
+KeyboardInterrupt

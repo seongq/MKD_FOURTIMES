@@ -1,0 +1,12 @@
+Epoch: 0:
+Start training ...
+Traceback (most recent call last):
+  File "/workspace/emotion_KD250628/MKD/CREMA_D_MKD/MKD/main_optimizer_chuga20250901.py", line 513, in <module>
+    main()
+  File "/workspace/emotion_KD250628/MKD/CREMA_D_MKD/MKD/main_optimizer_chuga20250901.py", line 415, in main
+    batch_loss, batch_loss_a, batch_loss_v, global_step = train_epoch(args, epoch, model, device,
+  File "/workspace/emotion_KD250628/MKD/CREMA_D_MKD/MKD/main_optimizer_chuga20250901.py", line 133, in train_epoch
+    score_v = sum([softmax(out_v)[i][label[i]] for i in range(out_v.size(0))])
+  File "/workspace/emotion_KD250628/MKD/CREMA_D_MKD/MKD/main_optimizer_chuga20250901.py", line 133, in <listcomp>
+    score_v = sum([softmax(out_v)[i][label[i]] for i in range(out_v.size(0))])
+KeyboardInterrupt
