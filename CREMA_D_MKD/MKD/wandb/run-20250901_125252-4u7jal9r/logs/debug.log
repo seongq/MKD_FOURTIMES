@@ -20,3 +20,4 @@ config: {'dataset': 'CREMAD', 'modulation': 'OGM_GE', 'fusion_method': 'sum', 'f
 2025-09-01 12:52:53,305 INFO    MainThread:3248639 [wandb_run.py:_redirect():2292] Wrapping output streams.
 2025-09-01 12:52:53,305 INFO    MainThread:3248639 [wandb_run.py:_redirect():2315] Redirects installed.
 2025-09-01 12:52:53,307 INFO    MainThread:3248639 [wandb_init.py:init():1032] run started, returning control to user process
+2025-09-01 21:32:53,913 INFO    MsgRouterThr:3248639 [mailbox.py:close():129] Closing mailbox, abandoning 1 handles.
