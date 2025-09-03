@@ -34,6 +34,11 @@ def get_arguments():
     parser.add_argument('--batch_size', default=64, type=int)
     parser.add_argument('--epochs', default=200, type=int)
 
+    parser.add_argument("--MKD", action='store_true')
+    parser.add_argument("--MKD_mode", choices = ['online', 'offline'], type=str, help="which MKD mode to use")
+    parser.add_argument("--audio_teacher_path", type=str, help="path to the audio teacher model")
+    parser.add_argument("--visual_teacher_path", type=str, help="path to the visual teacher model")
+    
     parser.add_argument('--optimizer', default='sgd', type=str, choices=['sgd', 'adam'])
     parser.add_argument('--learning_rate', default=0.001, type=float, help='initial learning rate')
     parser.add_argument('--lr_decay_step', default=70, type=int, help='where learning rate decays')
@@ -45,14 +50,8 @@ def get_arguments():
 
     parser.add_argument('--ckpt_path', type=str, default="/workspace/emotion_KD250628/MKD/CREMA_D_MKD/MKD/ckpt", help='path to save trained models')
     parser.add_argument('--train', action='store_true', required=True, help='turn on train mode')
-    parser.add_argument('--MKD', action='store_true')
-    parser.add_argument("--MKD_mode", choices = ['online', 'offline'], type=str, help="which MKD mode to use")
-    parser.add_argument("--audio_teacher_path", type=str, help="path to the audio teacher model")
-    parser.add_argument("--visual_teacher_path", type=str, help="path to the visual teacher model")
-    # parser.add_argument('--use_tensorboard', default=False, type=bool, help='whether to visualize')
-    # parser.add_argument('--tensorboard_path', type=str, help='path to save tensorboard logs')
 
-    # parser.add_argument('--random_seed', default=0, type=int)
+    
     parser.add_argument('--gpu_ids', default='0, 1', type=str, help='GPU ids')
     parser.add_argument("--small_dataset", action='store_true', help="use a small subset for debugging")
     
@@ -97,7 +96,7 @@ def ogm_modulation(args, epoch, model, out_a, out_v, label):
             # last_name = str(name).split('.')[-2]
             # print(name)
             if 'audio' in layer and len(parms.grad.size()) == 4:
-                
+                # print(layer)
                 if args.modulation == 'OGM_GE':  # bug fixed
                     parms.grad = parms.grad * coeff_a + \
                                 torch.zeros_like(parms.grad).normal_(0, parms.grad.std().item() + 1e-8)
@@ -115,7 +114,7 @@ def ogm_modulation(args, epoch, model, out_a, out_v, label):
         return None, None
 
 
-def train_epoch(args, epoch, model, device, dataloader, optimizer, scheduler, audio_model, visual_model, global_step=0, ):
+def train_epoch(args, epoch, model, device, dataloader, optimizer, scheduler, audio_model=None, visual_model=None, global_step=0):
     criterion = nn.CrossEntropyLoss()
     softmax = nn.Softmax(dim=1)
     relu = nn.ReLU(inplace=True)
@@ -173,16 +172,41 @@ def train_epoch(args, epoch, model, device, dataloader, optimizer, scheduler, au
 
                 out_a = (torch.mm(a, torch.transpose(model.module.fusion_module.fc_out.weight[:, :weight_size // 2], 0, 1))
                         + model.module.fusion_module.fc_out.bias / 2)
-
-            ###########MKD########
-            if args.MKD:
-                if args.MKD_mode == 'offline':
-                    pass
-                elif args.MKD_mode == 'online':
-                    pass
+            if args.MKD and args.MKD_mode == 'online':
+                audio_model.train()
+                visual_model.train()
+                out_teacher_a = audio_model(spec.unsqueeze(1).float(), image.float())[1]
+                out_teacher_v = visual_model(spec.unsqueeze(1).float(), image.float())[1]
+                softmax_out_teacher_a = softmax(out_teacher_a)
+                softmax_out_teacher_v = softmax(out_teacher_v)
+                loss = criterion(softmax_out_teacher_a, label) + criterion(softmax_out_teacher_v, label)
+                loss.backward()
+                optimizer.step()
+                optimizer.zero_grad()
+                
+                audio_model.eval()
+                visual_model.eval()
+                
+                with torch.no_grad():
+                    out_teacher_a = audio_model(spec.unsqueeze(1).float(), image.float())[1]
+                    out_teacher_v = visual_model(spec.unsqueeze(1).float(), image.float())[1]
+                    softmax_out_teacher_a = softmax(out_teacher_a)
+                    softmax_out_teacher_v = softmax(out_teacher_v)
+                
+                softmax_out_a = softmax(out_a)
+                softmax_out_v = softmax(out_v)
             
+                        
             
+                
             loss = criterion(out, label)
+            
+            if args.MKD and args.MKD_mode == 'online':
+                loss += criterion(softmax_out_a, label)
+                loss += criterion(softmax_out_v, label)
+                loss += criterion(softmax_out_a, softmax_out_teacher_a)
+                loss += criterion(softmax_out_v, softmax_out_teacher_v)
+                
             loss_v = criterion(out_v, label)
             loss_a = criterion(out_a, label)
             loss.backward()
@@ -348,6 +372,8 @@ def main():
             base = f"unimodal_{args.unimodal_modality}_opt{args.optimizer}_e{args.epochs}_seed{seed}"
         else:
             base = f"{args.dataset}_{args.modulation}_{args.fusion_method}_opt{args.optimizer}_e{args.epochs}_seed{seed}"
+            if args.MKD and args.MKD_mode == 'online':
+                base += f"_MKDonline"
 
         return f"{base}_{now_kst}", now_kst
     
@@ -398,6 +424,22 @@ def main():
             optimizer = optim.Adam(model.parameters(), lr=args.learning_rate,weight_decay=1e-4)
         elif args.optimizer == 'sgd':
             optimizer = optim.SGD(model.parameters(), lr=args.learning_rate, momentum=0.9, weight_decay=1e-4)
+            
+        if args.MKD and args.MKD_mode == 'online':
+            audio_model = UNIMODALClassifier(args, modality='audio')
+            visual_model = UNIMODALClassifier(args, modality='visual')
+            audio_model = torch.nn.DataParallel(audio_model, device_ids=gpu_ids)
+            visual_model = torch.nn.DataParallel(visual_model, device_ids=gpu_ids)
+            audio_model.cuda()
+            visual_model.cuda()
+            if args.optimizer == 'adam':
+                optimizer = optim.Adam([{'params': model.parameters()},
+                                        {'params': audio_model.parameters()},
+                                        {'params': visual_model.parameters()}], lr=args.learning_rate, weight_decay=1e-4)
+            elif args.optimizer == 'sgd':
+                optimizer = optim.SGD([{'params': model.parameters()},
+                                       {'params': audio_model.parameters()},
+                                       {'params': visual_model.parameters()}], lr=args.learning_rate, momentum=0.9, weight_decay=1e-4)
         scheduler = optim.lr_scheduler.StepLR(optimizer, args.lr_decay_step, args.lr_decay_ratio)
         
         
@@ -435,8 +477,13 @@ def main():
                 acc = valid(args, model, device, test_dataloader)
                 wandb.log({'valid/acc': float(acc), 'epoch': epoch}, step=global_step)
             else:
-                batch_loss, batch_loss_a, batch_loss_v, global_step = train_epoch(args, epoch, model, device,
-                                                                        train_dataloader, optimizer, scheduler,global_step)
+                if args.MKD and args.MKD_mode == 'online':
+                    batch_loss, batch_loss_a, batch_loss_v, global_step = train_epoch(args, epoch, model, device,
+                                                                        train_dataloader, optimizer, scheduler,audio_model=audio_model, visual_model=visual_model, global_step=global_step)    
+                    
+                else:                
+                    batch_loss, batch_loss_a, batch_loss_v, global_step = train_epoch(args, epoch, model, device,
+                                                                        train_dataloader, optimizer, scheduler,audio_model=None, visual_model=None, global_step=global_step)
                 acc, acc_a, acc_v = valid(args, model, device, test_dataloader)
                 wandb.log({'valid/acc': float(acc),
                            'valid/acc_a': float(acc_a),
@@ -497,11 +544,27 @@ def main():
                                 'args': vars(args)}
 
                     save_dir = os.path.join(args.ckpt_path, model_name)
-
-                    torch.save(saved_dict, save_dir)
-                    print('The best model has been saved at {}.'.format(save_dir))
-                    print("Loss: {:.3f}, Acc: {:.3f}".format(batch_loss, acc))
-                    print("Audio Acc: {:.3f}， Visual Acc: {:.3f} ".format(acc_a, acc_v))
+                    if args.MKD and args.MKD_mode == 'online':
+                        ckpt_path_MKD_folder = os.path.join(args.ckpt_path, f"MKD_online_modulation_{args.modulation}", f"{args.random_seed}_{now_kst}") 
+                        os.makedirs(ckpt_path_MKD_folder, exist_ok=True)   
+                        save_dir_MKD = os.path.join(ckpt_path_MKD_folder, model_name)
+                        torch.save(saved_dict,save_dir_MKD)
+                        
+                        save_dir_uni_audio = os.path.join(ckpt_path_MKD_folder, f"best_unimodal_audio_model_{args.random_seed}_{now_kst}.pth")
+                        save_dir_uni_visual = os.path.join(ckpt_path_MKD_folder, f"best_unimodal_visual_model_{args.random_seed}_{now_kst}.pth")
+                        saved_dict_audio = {'saved_epoch': epoch,
+                                'model': audio_model.state_dict(),                                
+                                'args': vars(args)} 
+                        saved_dict_visual = {'saved_epoch': epoch,
+                                'model': visual_model.state_dict(),
+                                'args': vars(args)}
+                        torch.save(saved_dict_audio, save_dir_uni_audio)
+                        torch.save(saved_dict_visual, save_dir_uni_visual)
+                    else:   
+                        torch.save(saved_dict, save_dir)
+                        print('The best model has been saved at {}.'.format(save_dir))
+                        print("Loss: {:.3f}, Acc: {:.3f}".format(batch_loss, acc))
+                        print("Audio Acc: {:.3f}， Visual Acc: {:.3f} ".format(acc_a, acc_v))
                 wandb.log({"checkpoint_path": save_dir}, step=global_step)
                 wandb.run.summary["best_model_path"] = save_dir
             else:

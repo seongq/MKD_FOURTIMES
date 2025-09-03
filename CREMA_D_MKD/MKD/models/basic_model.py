@@ -58,7 +58,7 @@ class AVClassifier(nn.Module):
 
 
 class UNIMODALClassifier(nn.Module):
-    def __init__(self, args):
+    def __init__(self, args, modality=None):
         super(UNIMODALClassifier, self).__init__()
 
         fusion = args.fusion_method
@@ -67,8 +67,12 @@ class UNIMODALClassifier(nn.Module):
         
         # else:
         #     raise NotImplementedError('Incorrect dataset name {}'.format(args.dataset))
-
-        self.unimodal = args.unimodal_modality
+        if args.MKD:
+            self.unimodal = modality
+        else:
+            self.unimodal = args.unimodal_modality
+        
+        
         
         if self.unimodal == "audio":
             self.audio_net = resnet18(modality='audio')
