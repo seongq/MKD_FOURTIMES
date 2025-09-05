@@ -411,7 +411,7 @@ def main():
         if args.unimodal:
             base = f"unimodal_{args.unimodal_modality}_opt{args.optimizer}_e{args.epochs}_seed{seed}"
         else:
-            base = f"{args.dataset}_{args.modulation}_{args.fusion_method}_opt{args.optimizer}_e{args.epochs}_seed{seed}"
+            base = f"{args.dataset}_{args.modulation}_scaling_{args.scaling}_alpha_{args.alpha}_{args.fusion_method}_opt{args.optimizer}_e{args.epochs}_seed{seed}"
             if args.MKD and args.MKD_mode == 'online':
                 base += f"_MKDonline"
 
