@@ -14,6 +14,7 @@ from datetime import datetime, timezone, timedelta
 from dataset.CramedDataset import CramedDataset
 from models.basic_model import AVClassifier, UNIMODALClassifier
 from utils.utils import setup_seed, weight_init
+import torch.nn.functional as F
 
 os.environ.setdefault("WANDB_CONSOLE", "wrap")
 
@@ -23,16 +24,16 @@ def get_arguments():
                         help='CREMAD')
     parser.add_argument('--modulation', default='Normal', type=str,
 
-                        choices=['Normal', 'OGM', 'OGM_GE'])
+                        choices=['Normal', 'OGM', 'OGM_GE', "MMCOSINE", "MMCONSINE_OGMGE", "MMCOSINE_OGM"])
     parser.add_argument('--fusion_method', default='concat', type=str,
                         choices=['sum', 'concat']) #gated, film은 잠시 버려
     parser.add_argument('--fps', default=1, type=int)
     parser.add_argument('--use_video_frames', default=3, type=int)
     parser.add_argument('--audio_path', default='/workspace/datasets/CREMA-D/AudioWAV', type=str)
     parser.add_argument('--visual_path', default='/workspace/datasets/CREMA-D/', type=str)
-
+    parser.add_argument('--scaling',default=10,type=float,help='scaling parameter in mmCosine')
     parser.add_argument('--batch_size', default=64, type=int)
-    parser.add_argument('--epochs', default=200, type=int)
+    parser.add_argument('--epochs', default=300, type=int)
 
     parser.add_argument("--MKD", action='store_true')
     parser.add_argument("--MKD_mode", choices = ['online', 'offline'], type=str, help="which MKD mode to use")
@@ -113,6 +114,12 @@ def ogm_modulation(args, epoch, model, out_a, out_v, label):
     else:
         return None, None
 
+def mmcsoine_modulation(args, model, out_a, out_v):
+    out_a=out_a*args.scaling
+    out_v=out_v*args.scaling
+    out=out_a+out_v
+    return out_a, out_v, out
+
 
 def train_epoch(args, epoch, model, device, dataloader, optimizer, scheduler, audio_model=None, visual_model=None, global_step=0):
     criterion = nn.CrossEntropyLoss()
@@ -160,18 +167,7 @@ def train_epoch(args, epoch, model, device, dataloader, optimizer, scheduler, au
             
         else:
             a, v, out, out_a, out_v = model(spec.unsqueeze(1).float(), image.float())
-            if args.fusion_method == 'sum':
-                out_v = (torch.mm(v, torch.transpose(model.module.fusion_module.fc_y.weight, 0, 1)) +
-                        model.module.fusion_module.fc_y.bias)
-                out_a = (torch.mm(a, torch.transpose(model.module.fusion_module.fc_x.weight, 0, 1)) +
-                        model.module.fusion_module.fc_x.bias)
-            elif args.fusion_method == 'concat':
-                weight_size = model.module.fusion_module.fc_out.weight.size(1)
-                out_v = (torch.mm(v, torch.transpose(model.module.fusion_module.fc_out.weight[:, weight_size // 2:], 0, 1))
-                        + model.module.fusion_module.fc_out.bias / 2)
-
-                out_a = (torch.mm(a, torch.transpose(model.module.fusion_module.fc_out.weight[:, :weight_size // 2], 0, 1))
-                        + model.module.fusion_module.fc_out.bias / 2)
+            
             if args.MKD and args.MKD_mode == 'online':
                 audio_model.train()
                 visual_model.train()
@@ -207,21 +203,40 @@ def train_epoch(args, epoch, model, device, dataloader, optimizer, scheduler, au
                 loss += criterion(softmax_out_a, softmax_out_teacher_a)
                 loss += criterion(softmax_out_v, softmax_out_teacher_v)
                 
-            loss_v = criterion(out_v, label)
-            loss_a = criterion(out_a, label)
+           
             loss.backward()
             ###############################################################################
-            ############### OGM - GE 코드 작성 부분 ########################################
+            ############### modulation, Normal, OGM, OGM_GE 코드 작성 부분 ########################################
             ###############################################################################
             if args.modulation == 'Normal':
                 # no modulation, regular optimization
                 pass
             else:
-                # Modulation starts here !
-                coeff_a, coeff_v = ogm_modulation(args, epoch, model, out_a, out_v, label)
+                if args.fusion_method == 'sum':
+                    out_v = (torch.mm(v, torch.transpose(model.module.fusion_module.fc_y.weight, 0, 1)) +
+                            model.module.fusion_module.fc_y.bias)
+                    out_a = (torch.mm(a, torch.transpose(model.module.fusion_module.fc_x.weight, 0, 1)) +
+                            model.module.fusion_module.fc_x.bias)
+                elif args.fusion_method == 'concat':
+                    weight_size = model.module.fusion_module.fc_out.weight.size(1)
+                    if args.modulation in ("OGM", "OGM_GE"):
+                        out_v = (torch.mm(v, torch.transpose(model.module.fusion_module.fc_out.weight[:, weight_size // 2:], 0, 1))
+                                + model.module.fusion_module.fc_out.bias / 2)
 
+                        out_a = (torch.mm(a, torch.transpose(model.module.fusion_module.fc_out.weight[:, :weight_size // 2], 0, 1))
+                                + model.module.fusion_module.fc_out.bias / 2)
+                    elif args.modulation == "MMCOSINE":
+                        out_a = torch.mm(F.normalize(a,dim=1), F.normalize(torch.transpose(model.module.fusion_module.fc_out.weight[:, :512], 0, 1),dim=0))   # w[n_classes,feature_dim*2]->W[feature_dim, n_classes], norm at dim 0.
+                        out_v = torch.mm(F.normalize(v,dim=1), F.normalize(torch.transpose(model.module.fusion_module.fc_out.weight[:, 512:], 0, 1),dim=0))  
+                if args.modulation in ("OGM", "OGM_GE"):
+                    # Modulation starts here !
+                    coeff_a, coeff_v = ogm_modulation(args, epoch, model, out_a, out_v, label)
+                elif args.modulation == "MMCOSINE":
+                    out_a, out_v , out = mmcsoine_modulation(args, model, out_a, out_v)
 
             
+            loss_v = criterion(out_v, label)
+            loss_a = criterion(out_a, label)
 
             _loss += loss.item()
             _loss_a += loss_a.item()
@@ -242,6 +257,21 @@ def train_epoch(args, epoch, model, device, dataloader, optimizer, scheduler, au
                 if coeff_a is not None:
                     log_dict['train/coeff_a'] = float(coeff_a)
                     log_dict['train/coeff_v'] = float(coeff_v)
+                wandb.log(log_dict, step=global_step)
+                
+            if args.modulation == "MMCOSINE":
+                log_dict = {
+                    'train/loss': loss.item(),
+                    'train/loss_a': loss_a.item(),
+                    'train/loss_v': loss_v.item(),
+                    'train/epoch': epoch,
+                    'train/iter_in_epoch': step,
+                    'train/global_step': global_step,
+                    'train/lr': optimizer.param_groups[0]['lr'],
+                }
+                # if coeff_a is not None:
+                #     log_dict['train/coeff_a'] = float(coeff_a)
+                #     log_dict['train/coeff_v'] = float(coeff_v)
                 wandb.log(log_dict, step=global_step)
             elif args.modulation == "Normal":
                 wandb.log({
@@ -325,11 +355,21 @@ def valid(args, model, device, dataloader):
                             model.module.fusion_module.fc_y.bias / 2)
                     out_a = (torch.mm(a, torch.transpose(model.module.fusion_module.fc_x.weight, 0, 1)) +
                             model.module.fusion_module.fc_x.bias / 2)
-                else:
-                    out_v = (torch.mm(v, torch.transpose(model.module.fusion_module.fc_out.weight[:, 512:], 0, 1)) +
-                            model.module.fusion_module.fc_out.bias / 2)
-                    out_a = (torch.mm(a, torch.transpose(model.module.fusion_module.fc_out.weight[:, :512], 0, 1)) +
-                            model.module.fusion_module.fc_out.bias / 2)
+                elif args.fusion_method == 'concat':
+                    weight_size = model.module.fusion_module.fc_out.weight.size(1)
+                    
+                    
+                    if args.modulation == "MMCOSINE":
+                        out_a = torch.mm(F.normalize(a,dim=1), F.normalize(torch.transpose(model.module.fusion_module.fc_out.weight[:, :512], 0, 1),dim=0))   # w[n_classes,feature_dim*2]->W[feature_dim, n_classes], norm at dim 0.
+                        out_v = torch.mm(F.normalize(v,dim=1), F.normalize(torch.transpose(model.module.fusion_module.fc_out.weight[:, 512:], 0, 1),dim=0))  
+                        out_a, out_v , out = mmcsoine_modulation(args, model, out_a, out_v)
+                    else:
+                        out_v = (torch.mm(v, torch.transpose(model.module.fusion_module.fc_out.weight[:, weight_size // 2:], 0, 1))
+                                + model.module.fusion_module.fc_out.bias / 2)
+
+                        out_a = (torch.mm(a, torch.transpose(model.module.fusion_module.fc_out.weight[:, :weight_size // 2], 0, 1))
+                                + model.module.fusion_module.fc_out.bias / 2)
+             
 
                 prediction = softmax(out)
                 pred_v = softmax(out_v)
@@ -460,7 +500,10 @@ def main():
             assert not args.unimodal, "Modulation is not applicable in unimodal training"
             assert args.alpha is not None, "--alpha must be specified when --modulation is OGM or OGM_GE"
             assert args.alpha > 0, "--alpha must be a positive float"
-            
+        elif args.modulation== "MMCOSINE":
+            assert args.fusion_method == "concat", "mmCosine only works with concat fusion" 
+            assert args.scaling >0, "scaling should be a positive float"
+            assert args.scaling is not None, "--scaling should be specified in mmCosine"
             
         
 
@@ -522,20 +565,24 @@ def main():
                     if not os.path.exists(args.ckpt_path):
                         os.mkdir(args.ckpt_path)
 
-                    model_name = 'best_model_of_dataset_{}_{}_{}_alpha_{}_' \
+                    model_name = 'best_model_of_dataset_{}_{}_{}_mmcosine_scaling_{}_alpha_{}_' \
                                 'optimizer_{}_modulate_starts_{}_ends_{}_' \
                                 'epoch_{}_acc_{}_{}.pth'.format(args.dataset,
                                                             args.modulation,
                                                             args.fusion_method,
+                                                            args.scaling,
                                                             args.alpha,
                                                             args.optimizer,
                                                             args.modulation_starts,
                                                             args.modulation_ends,
-                                                            epoch, acc, now_kst)
+                                                            epoch, 
+                                                            acc, 
+                                                            now_kst)
 
                     saved_dict = {'saved_epoch': epoch,
                                 'modulation': args.modulation,
                                 'alpha': args.alpha,
+                                'scaling': args.scaling,
                                 'fusion': args.fusion_method,
                                 'acc': acc,
                                 'model': model.state_dict(),
@@ -545,7 +592,7 @@ def main():
 
                     save_dir = os.path.join(args.ckpt_path, model_name)
                     if args.MKD and args.MKD_mode == 'online':
-                        ckpt_path_MKD_folder = os.path.join(args.ckpt_path, f"MKD_online_modulation_{args.modulation}", f"{args.random_seed}_{now_kst}") 
+                        ckpt_path_MKD_folder = os.path.join(args.ckpt_path, f"MKD_online_jinjja20250905version_modulation_{args.modulation}", f"{args.random_seed}_{now_kst}") 
                         os.makedirs(ckpt_path_MKD_folder, exist_ok=True)   
                         save_dir_MKD = os.path.join(ckpt_path_MKD_folder, model_name)
                         torch.save(saved_dict,save_dir_MKD)
